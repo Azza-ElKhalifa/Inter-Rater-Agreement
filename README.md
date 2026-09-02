@@ -54,7 +54,7 @@ The final synthesis includes 33 peer-reviewed empirical journal articles. Two re
 | `calculate_kappa.py` | Cohen's kappa with bootstrap 95% CIs for all stages |
 | `kappa_results.txt` | Output of `calculate_kappa.py` |
 
-Files listing 35 studies predate the final eligibility audit, in which Qin (2024) and Wu (2024) were excluded as ECG-only studies; the final eligible set is 33 (see `fulltext_exclusion_log.csv`). Pre-consensus ratings for Qin and Wu are retained in those files because the agreement statistics in Supplementary Table 17 are computed on the eligible set (`agreement_eligible_set.py`).
+All rating files list the 33 eligible studies. The screening files record the full screening history, and the 13 full-text exclusions appear in `fulltext_exclusion_log.csv`.
 
 ## Agreement statistics
 

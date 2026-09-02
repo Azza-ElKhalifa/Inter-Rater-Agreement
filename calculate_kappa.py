@@ -240,6 +240,7 @@ trs_rows = []
 for _, mrow in mdf.iterrows():
     mp = int(mrow['#'])
     inc = madiha_to_inc[mp]
+    if inc in (17, 24): continue  # Qin and Wu excluded from the eligible set
     study_name, a_crit = azza_trs[inc]
 
     m_crit = []
@@ -295,7 +296,7 @@ all_lim_a, all_lim_m = [], []
 lim_rows = []
 
 for inc_num in range(1, 37):
-    if inc_num == 15: continue  # Chen & Jiao excluded
+    if inc_num in (15, 17, 24): continue  # Chen & Jiao excluded; Qin and Wu not in the eligible set
     study_name = azza_trs[inc_num][0]
     a_scores = azza_lim[inc_num]
     m_scores = madiha_lim[inc_num]  # Madiha's pre-discussion scores
@@ -573,7 +574,7 @@ print(f"   Quadratic weighted kappa = {kh_quad:.4f}  [95% CI: {lo_quad:.4f} - {h
 # Build Hayam three-reviewer L1-L6 comparison table (AE / MK / HK), totals recomputed
 hk_rows = []
 for i in range(1, 37):
-    if i == 15: continue  # Chen & Jiao excluded
+    if i in (15, 17, 24): continue  # Chen & Jiao excluded; Qin and Wu not in the eligible set
     a_s, m_s, h_s = azza_lim[i], madiha_lim[i], hayam_lim[i]
     row = {'Study_ID': i, 'Study': azza_trs[i][0]}
     for j, ln in enumerate(lim_names):
@@ -790,7 +791,7 @@ fourlevel_df = pd.DataFrame([
          + [(f'AE_{c}', azza_4lv[_s][j]) for j, c in enumerate(_crit)]
          + [(f'MK_{c}', madiha_4lv[_s][j]) for j, c in enumerate(_crit)]
          + [(f'FINAL_{c}', fourlevel_final[_s][j]) for j, c in enumerate(_crit)])
-    for _s in sorted(azza_4lv)
+    for _s in sorted(azza_4lv) if _s not in (16, 23)
 ])
 
 
@@ -837,6 +838,9 @@ print(f"{'='*75}")
 
 screen_df.to_csv(os.path.join(OUT, 'screening_title_abstract.csv'), index=False, encoding='utf-8-sig')
 ft_df.to_csv(os.path.join(OUT, 'screening_fulltext.csv'), index=False, encoding='utf-8-sig')
+for _df in (trs_df, fourlevel_df, lim_df, hayam_lim_df):
+    _df.reset_index(drop=True, inplace=True)
+    _df['Study_ID'] = range(1, len(_df) + 1)
 trs_df.to_csv(os.path.join(OUT, 'trs_criteria_comparison.csv'), index=False, encoding='utf-8-sig')
 fourlevel_df.to_csv(os.path.join(OUT, 'rtfs_fourlevel_comparison.csv'), index=False, encoding='utf-8-sig')
 lim_df.to_csv(os.path.join(OUT, 'limitation_scores_comparison.csv'), index=False, encoding='utf-8-sig')
