@@ -1,0 +1,19 @@
+﻿Study_ID,Study,Field,AE_Value,MK_Value,Resolution
+2,Nakisa et al. (2020),Sample size,17,20,Resolved per PDF
+3,Dar et al. (2020),Validation method,k-fold,LOSO,Resolved per PDF
+6,Sun et al. (2020),Performance metrics,Accuracy,F1-score,Resolved per PDF
+7,Kwon et al. (2021),Sample size,24,20,"20 (4 excluded due to technical error, per PDF)"
+7,Kwon et al. (2021),Validation method,Hold-out,LOSO,Resolved per PDF
+8,Du et al. (2022),Sample size,50,12,Resolved per PDF
+8,Du et al. (2022),Performance metrics,92.3%,89.5%,Resolved per PDF
+9,Jiang et al. (2022),Performance metrics,98.9%,87.7%,"98.9% (cloud CNN accuracy from Table 4, per PDF)"
+10,Nandi & Xhafa (2022),Validation method,Prequential (streaming),Interleaved test-then-train,Interleaved test-then-train (per PDF)
+12,Akbulut et al. (2022),Validation method,10-fold CV,LOSO,Resolved per PDF
+14,Zitouni et al. (2023),Performance metrics,96.11% arousal / 96.78% valence,>96% and >93% (from abstract),Combined both values from full text
+14,Zitouni et al. (2023),Dataset classification,Public,Custom,Resolved per PDF
+18,Gong et al. (2024),Performance metrics,91.2%,88.7%,"Different experimental settings, resolved per PDF"
+19,Sriram Kumar et al. (2024),Performance metrics,86.66% (CASE) / 83.96% (WESAD),EDA-based 79.15% (FM); combined 80.74%,86.66% (4-class) / 83.96% (3-class) per PDF
+20,Zhang et al. (2024),Dataset classification,Public,Custom,Resolved per PDF
+22,Yang et al. (2024),Performance metrics,94.5%,91.3%,Resolved per PDF
+26,Polo et al. (2025),Performance metrics,87.2%,85.1%,Resolved per PDF
+27,Nandini et al. (2025),Performance metrics,93.4%,90.8%,Resolved per PDF

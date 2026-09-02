@@ -1,0 +1,34 @@
+﻿#,Study,Year,Datasets used,Primary dataset or cohort,Cohort type,Retained in reduced set,Role
+1,Zheng et al. (2019),2019,SEED-IV (self-collected),Self-collected (SEED-IV),Self-collected,Yes,Independent cohort
+2,Nakisa et al. (2020),2020,Self-collected,Self-collected,Self-collected,Yes,Independent cohort
+3,Dar et al. (2020),2020,"DREAMER, AMIGOS",AMIGOS,Public,Yes,Single user of dataset
+4,Dziezyc et al. (2020),2020,"AMIGOS, ASCERTAIN, DECAF, WESAD",WESAD,Public,No,WESAD cluster member
+5,Ayata et al. (2020),2020,DEAP,DEAP,Public,No,DEAP cluster member
+6,Sun et al. (2020),2020,Self-collected (NJIT),Self-collected,Self-collected,Yes,Independent cohort
+7,Kwon et al. (2021),2021,Self-collected,Self-collected,Self-collected,Yes,Independent cohort
+8,Du et al. (2022),2022,Self-collected,Self-collected,Self-collected,Yes,Independent cohort
+9,Jiang et al. (2022),2022,WESAD,WESAD,Public,Yes,Representative of WESAD cluster (n=2)
+10,Nandi & Xhafa (2022),2022,DEAP,DEAP,Public,No,DEAP cluster member
+11,Younis et al. (2022),2022,Self-collected (campus),Self-collected,Self-collected,Yes,Independent cohort
+12,Akbulut (2022),2022,CVDiMo (self-collected),Self-collected (CVDiMo),Self-collected,Yes,Independent cohort
+13,Yang et al. (2023),2023,Self-collected,Self-collected,Self-collected,Yes,Independent cohort
+14,Zitouni et al. (2023),2023,K-EmoCon,K-EmoCon,Public,Yes,Single user of dataset
+15,Wang et al. (2024),2024,Self-collected,Self-collected,Self-collected,Yes,Independent cohort
+16,Gong et al. (2024),2024,"SEED, SEED-FRA",SEED,Public,Yes,Single user of dataset
+17,Sriram Kumar et al. (2024),2024,"CASE, WESAD",CASE,Public,No,CASE cluster member
+18,Zhang et al. (2024),2024,"UBFC-Phys, WESAD",UBFC-Phys,Public,Yes,Single user of dataset
+19,Hou et al. (2024),2024,"HR-EEG4EMO, DECAF",DECAF,Public,Yes,Single user of dataset
+20,Yang et al. (2024),2024,POPANE,POPANE,Public,Yes,Single user of dataset
+21,Li & Peng (2024),2024,MAHNOB-HCI,MAHNOB-HCI,Public,No,MAHNOB-HCI cluster member
+22,Moon et al. (2024),2024,TERS-ER + Ulm-TSST + speech DBs,TERS-ER,Public,Yes,Single user of dataset
+23,Polo et al. (2025),2025,Self-collected VR dataset,Self-collected,Self-collected,Yes,Independent cohort
+24,Nandini et al. (2025),2025,EMOGNITION,EMOGNITION,Public,Yes,Single user of dataset
+25,Safavi et al. (2025),2025,DEAP,DEAP,Public,No,DEAP cluster member
+26,Kuyucu et al. (2025),2025,Self-collected VR (N=95),Self-collected,Self-collected,Yes,Independent cohort
+27,Vu et al. (2025),2025,CASE,CASE,Public,Yes,Representative of CASE cluster (n=2)
+28,Boateng et al. (2026),2026,Self-collected (DyMand),Self-collected (DyMand),Self-collected,Yes,Independent cohort
+29,Thangarajan et al. (2026),2026,"DEAP, AMIGOS, MAHNOB-HCI",DEAP,Public,Yes,Representative of DEAP cluster (n=5)
+30,Zhou et al. (2026),2026,"MAHNOB-HCI, DEAP",MAHNOB-HCI,Public,Yes,Representative of MAHNOB-HCI cluster (n=2)
+31,"Barki, Mai & Chung (2026)",2026,Self-collected,Self-collected,Self-collected,Yes,Independent cohort
+32,Liang et al. (2026),2026,"DEAP, DREAMER, WESAD",DEAP,Public,No,DEAP cluster member
+33,Gahlan & Sethia (2026),2026,Self-collected (ASMR stimuli),Self-collected,Self-collected,Yes,Independent cohort

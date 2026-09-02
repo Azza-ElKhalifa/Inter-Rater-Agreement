@@ -1,0 +1,171 @@
+﻿Paper_ID,Title,Year,Reviewer1_AE,Reviewer2_MK,Agreement
+15,Artificial Intelligence Technology-Driven Teacher Mental State Assessment and Improvement Method,2024,Include,Include,Yes
+19,Emotion recognition from auditory autonomous sensory meridian response (ASMR) using multi-modal physiological signals,2026,Include,Include,Yes
+20,"A Multimodal Dataset for Assessing Emotion, Stress, and Emotional Workload in Interpersonal Work Scenario",2026,Include,Include,Yes
+22,ULER: An Ultra-Lightweight Joint Attention Model for Emotion Recognition from Multimodal Physiological Signals,2026,Include,Include,Yes
+23,A GPTAssisted Multi Modal Emotion Intelligence Framework for Mental Health Predictive Analytics using Physiological Sign,2026,Include,Include,Yes
+25,Switch fusion for continuous emotion estimation from multiple physiological signals,2025,Include,Include,Yes
+27,Advancing emotion recognition with Virtual Reality: A multimodal approach using physiological signals and machine learni,2025,Include,Include,Yes
+29,A discriminative multi-modal adaptation neural network model for video action recognition,2025,Exclude,Exclude,Yes
+30,Mobile Game Evaluation Method Based on Data Mining of Affective Time Series,2025,Exclude,Exclude,Yes
+31,"Stretchable, Rechargeable, Multimodal Hybrid Electronics for Decoupled Sensing toward Emotion Detection",2025,Exclude,Exclude,Yes
+32,A convolution and attention-based conditional adversarial domain adaptation neural network for emotion recognition using,2025,Exclude,Exclude,Yes
+33,An On-Board Executable Multi-Feature Transfer-Enhanced Fusion Model for Three-Lead EEG Sensor-Assisted Depression Diagno,2025,Exclude,Exclude,Yes
+34,Explainable Depression Classification Based on EEG Feature Selection From Audio Stimuli,2025,Exclude,Exclude,Yes
+35,Beyond Vital Signs: Emotion-Aware Remote Patient Monitoring,2025,Exclude,Exclude,Yes
+36,Encoding of multi-modal emotional information via personalized skin-integrated wireless facial interface,2024,Exclude,Exclude,Yes
+37,EmoWear: Wearable Physiological and Motion Dataset for Emotion Recognition and Context Awareness,2024,Include,Include,Yes
+38,Emotion recognition based on multimodal physiological signals using spiking feed-forward neural networks,2024,Include,Exclude,No (resolved)
+39,End-to-End Multimodal Emotion Recognition Based on Facial Expressions and Remote Photoplethysmography Signals,2024,Include,Exclude,No (resolved)
+40,Multi-physiological signal fusion for objective emotion recognition in educational human-computer interaction,2024,Include,Include,Yes
+41,Wearable-based human flow experience recognition enhanced by transfer learning methods using emotion data,2023,Exclude,Exclude,Yes
+42,The Impact of Virtual Humans on Psychosomatic Medicine,2023,Exclude,Exclude,Yes
+43,Stress Detection Through Wrist-Based Electrodermal Activity Monitoring and Machine Learning,2023,Exclude,Exclude,Yes
+44,LSTM-Modeling of Emotion Recognition Using Peripheral Physiological Signals in Naturalistic Conversations,2023,Include,Include,Yes
+45,A federated learning method for real-time emotion state classification from multi-modal streaming,2022,Include,Include,Yes
+46,A Multimodal AI System for Out-of-Distribution Generalization of Seizure Identification,2022,Exclude,Exclude,Yes
+47,"Multimodal Depression Detection Using Audio, Visual and Textual Cues: A Survey",2022,Exclude,Exclude,Yes
+48,Hybrid deep convolutional model-based emotion recognition using multiple physiological signals,2022,Include,Include,Yes
+49,A Wearable Head Mounted Display Bio-Signals Pad System for Emotion Recognition,2021,Include,Include,Yes
+51,"K-EmoCon, a multimodal sensor dataset for continuous emotion recognition in naturalistic conversations",2020,Include,Include,Yes
+52,CNN and LSTM-Based Emotion Charting Using Physiological Signals,2020,Include,Include,Yes
+53,Physiological Sensors Based Emotion Recognition While Experiencing Tactile Enhanced Multimedia,2020,Exclude,Exclude,Yes
+54,Emotion Recognition from Multimodal Physiological Signals for Emotion Aware Healthcare Systems,2020,Include,Include,Yes
+55,Multimodal affective state assessment using fNIRS+ EEG and spontaneous facial expression,2020,Include,Include,Yes
+56,Novel fuzzy rough nearest neighbors emotion recognition approach based on multimodal wearable biosensor network,2020,Include,Include,Yes
+57,Toward Dynamically Adaptive Simulation: Multimodal Classification of User Expertise Using Wearable Devices,2019,Exclude,Exclude,Yes
+58,Automatic Emotion Perception Using Eye Movement Information for E-Healthcare Systems,2018,Exclude,Exclude,Yes
+59,Ensemble application of convolutional neural networks and multiple kernel learning for multimodal sentiment analysis,2017,Exclude,Exclude,Yes
+60,Wearable electroencephalography and multi-modal mental state classification: A systematic literature review.,2022,Exclude,Exclude,Yes
+61,Fear Detection in Multimodal Affective Computing: Physiological Signals versus Catecholamine Concentration.,2022,Exclude,Exclude,Yes
+62,STSNet: a novel spatio-temporal-spectral network for subject-independent EEG-based emotion recognition.,2023,Exclude,Exclude,Yes
+63,Imitation and recognition of facial emotions in autism: a computer vision approach.,2021,Exclude,Exclude,Yes
+64,Affective states in digital game-based learning: Thematic evolution and social network analysis.,2021,Exclude,Exclude,Yes
+65,A Wearable Multi-Modal Bio-Sensing System Towards Real-World Applications.,2019,Exclude,Exclude,Yes
+66,MsWH: A Multi-Sensory Hardware Platform for Capturing and Analyzing Physiological Emotional Signals.,2022,Exclude,Exclude,Yes
+67,Augmenting ECG Data with Multiple Filters for a Better Emotion Recognition System.,2023,Exclude,Exclude,Yes
+68,"Multimodal learning-based speech enhancement and separation, recent innovations, new horizons, challenges and real-world",2025,Exclude,Exclude,Yes
+69,Contactless blood oxygen estimation from face videos: A multi-model fusion method based on deep learning.,2023,Exclude,Exclude,Yes
+70,Emotion recognition in Virtual Reality using sensor fusion with eye tracking.,2025,Include,Include,Yes
+71,"Emognition dataset: emotion recognition with self-reports, facial expressions, and physiology using wearables.",2022,Include,Include,Yes
+72,The uulmMAC Database-A Multimodal Affective Corpus for Affective Computing in Human-Computer Interaction.,2020,Exclude,Exclude,Yes
+73,A multimodal stress detection dataset with facial expressions and physiological signals.,2025,Include,Include,Yes
+74,ADABase: A Multimodal Dataset for Cognitive Load Estimation.,2022,Exclude,Exclude,Yes
+75,Evaluating Ensemble Learning Methods for Multi-Modal Emotion Recognition Using Sensor Data Fusion.,2022,Include,Include,Yes
+76,Panic Attack Prediction for Patients With Panic Disorder via Machine Learning and Wearable Electrocardiography Monitorin,2025,Exclude,Exclude,Yes
+77,Effects of executive function on age-related emotion recognition decline varied by sex.,2024,Exclude,Exclude,Yes
+78,Instant Stress: Detection of Perceived Mental Stress Through Smartphone Photoplethysmography and Thermal Imaging.,2019,Exclude,Exclude,Yes
+79,EmotionMeter: A Multimodal Framework for Recognizing Human Emotions.,2019,Include,Include,Yes
+80,Psychophysiological Arousal in Young Children Who Stutter: An Interpretable AI Approach.,2022,Exclude,Exclude,Yes
+81,An ensemble deep learning framework for emotion recognition through wearable devices multi-modal physiological signals.,2025,Include,Include,Yes
+82,Leveraging Multi-Modal Sensing for Mobile Health: A Case Review in Chronic Pain.,2016,Exclude,Exclude,Yes
+83,Can We Ditch Feature Engineering? End-to-End Deep Learning for Affect Recognition from Physiological Sensor Data.,2020,Include,Include,Yes
+84,Robotic Telemedicine for Mental Health: A Multimodal Approach to Improve Human-Robot Engagement.,2021,Exclude,Exclude,Yes
+85,Beyond EDA: A Systematic Review of Multimodal Sympathetic Nervous System Arousal Classification for Stress Detection.,2026,Exclude,Exclude,Yes
+86,Assessing Mental Health and Emotional States by Using Smartphone Photoplethysmography-Based Digital Pulse Waveform Analy,2026,Exclude,Exclude,Yes
+87,An innovative brain-inspired neuronal competition model for electroencephalography emotion recognition.,2025,Exclude,Exclude,Yes
+88,Objective Emotion Assessment Using a Triple Attention Network for an EEG-Based Brain-Computer Interface.,2025,Exclude,Exclude,Yes
+89,"Preliminary Technical Validation of LittleBeats™: A Multimodal Sensing Platform to Capture Cardiac Physiology, Motion, a",2024,Exclude,Exclude,Yes
+90,Patients' and Health Care Professionals' Expectations of Virtual Therapeutic Agents in Outpatient Aftercare: Qualitative,2025,Exclude,Exclude,Yes
+91,An adaptive control framework based multi-modal information-driven dance composition model for musical robots.,2023,Exclude,Exclude,Yes
+92,"Design, development, and validation of a multimodal synergy-based intuitive virtual and augmented reality therapy platfo",2026,Include,Include,Yes
+93,Technical validation of a multimodal emotion-adaptive biofeedback system for autonomic regulation using guided breathing,2026,Exclude,Exclude,Yes
+94,"""Are You Okay, Honey?"": Recognizing Emotions Among Couples Managing Diabetes in Daily Life Using Multimodal Real-World S",2026,Include,Include,Yes
+95,Using Wearable Physiological Sensors for Affect-Aware Intelligent Tutoring Systems,2021,Exclude,Exclude,Yes
+118,Can a Holistic View Facilitate the Development of Intelligent Traditional Chinese Medicine? A Survey,2023,Exclude,Exclude,Yes
+123,A Marked Point Process Approach for Continuous Valence Estimation Using Respiration Activity,2025,Exclude,Exclude,Yes
+124,Let IoT Know You Better: User Identification and Emotion Recognition Through Millimeter-Wave Sensing,2023,Exclude,Exclude,Yes
+132,The Mental Health Index (MHI): A Personalized Multi-Task Deep Learning Framework for Real-Time and Explainable Mental We,2025,Exclude,Exclude,Yes
+137,Task Load Estimation from Multimodal Head-Worn Sensors Using Event Sequence Features,2021,Exclude,Exclude,Yes
+138,Multi-Perspective Cost-Sensitive Context-Aware Multi-Instance Sparse Coding and Its Application to Sensitive Video Recog,2016,Exclude,Exclude,Yes
+140,A Bayesian Deep Learning Framework for End-To-End Prediction of Emotion From Heartbeat,2022,Exclude,Exclude,Yes
+141,Cognitive Behavior-in-the-Loop: Towards an Attentive Driving in Intelligent Transportation Systems,2024,Exclude,Exclude,Yes
+143,Emotion Classification Through Optimal Segments of EDA and Texture Analysis of Time-Encoded Images With Artificial Intel,2025,Exclude,Exclude,Yes
+144,Using Wearable and Structured Emotion-Sensing-Graphs for Assessment of Depressive Symptoms in Patients Undergoing Treatm,2024,Exclude,Exclude,Yes
+147,iAware: A Real-Time Emotional Biofeedback System Based on Physiological Signals,2018,Exclude,Exclude,Yes
+148,Hybrid Emotion-Aware Monitoring System Based on Brainwaves for Internet of Medical Things,2021,Exclude,Exclude,Yes
+151,A Review of Human Synchronization Datasets,2025,Exclude,Exclude,Yes
+154,Review and Challenges of Technologies for Real-Time Human Behavior Monitoring,2021,Exclude,Exclude,Yes
+156,Effects of Scent on the Perceived Emotional Expression of Dance,2026,Exclude,Exclude,Yes
+157,Stress Severity Detection in College Students Using Emotional Pulse Signals and Deep Learning,2025,Exclude,Exclude,Yes
+166,Study on Horse-Rider Interaction Based on Body Sensor Network in Competitive Equitation,2022,Exclude,Exclude,Yes
+170,Language as a Bridge: Semantic-Guided Cross-Modal Gait Recognition via Text Prototype and Feature Decoupling,2026,Exclude,Exclude,Yes
+171,A Resilient and Hierarchical IoT-Based Solution for Stress Monitoring in Everyday Settings,2022,Include,Include,Yes
+176,Self-Adjustable Galvanic Skin Response Sensor for Physiological Monitoring,2023,Exclude,Exclude,Yes
+180,ECG-Based Automated Emotion Recognition Using Temporal Convolution Neural Networks,2024,Exclude,Exclude,Yes
+182,Mobile Virtual Assistant for Multi-Modal Depression-Level Stratification,2025,Exclude,Exclude,Yes
+191,Bindi: Affective Internet of Things to Combat Gender-Based Violence,2022,Exclude,Exclude,Yes
+193,Dynamic Alignment and Fusion of Multimodal Physiological Patterns for Stress Recognition,2024,Include,Include,Yes
+197,IoT-Oriented EEG-Based Memory State Recognition With Music-Facilitated Hierarchical Temporal–Frequency Fusion,2026,Exclude,Exclude,Yes
+201,Advancements in Affective Disorder Detection: Using Multimodal Physiological Signals and Neuromorphic Computing Based on,2024,Exclude,Exclude,Yes
+204,A Benchmark of Microvideos for Public Opinion Analysis,2026,Exclude,Exclude,Yes
+210,Emotion Based Music Recommendation System Using Wearable Physiological Sensors,2018,Exclude,Exclude,Yes
+211,"AMIGOS: A Dataset for Affect, Personality and Mood Research on Individuals and Groups",2021,Include,Include,Yes
+213,Intelligent Emotion Detection Method Based on Deep Learning in Medical and Health Data,2020,Exclude,Exclude,Yes
+215,Wearable Long-Term Social Sensing for Mental Wellbeing,2019,Exclude,Exclude,Yes
+217,Seismocardiography for Emotion Recognition: A Study on EmoWear With Insights From DEAP,2025,Exclude,Exclude,Yes
+226,The MatchNMingle Dataset: A Novel Multi-Sensor Resource for the Analysis of Social Interactions and Group Dynamics In-th,2021,Exclude,Exclude,Yes
+228,The Three-Lead EEG Sensor: Introducing an EEG-Assisted Depression Diagnosis System Based on Ant Lion Optimization,2023,Exclude,Exclude,Yes
+231,Towards Emotionally Aware AI Smart Classroom: Current Issues and Directions for Engineering and Education,2018,Exclude,Exclude,Yes
+236,Deep Learning-Based Automated Emotion Recognition Using Multimodal Physiological Signals and Time-Frequency Methods,2024,Include,Include,Yes
+237,Capturing Interaction Quality in Long Duration (Simulated) Space Missions With Wearables,2023,Exclude,Exclude,Yes
+243,Fusing of Electroencephalogram and Eye Movement With Group Sparse Canonical Correlation Analysis for Anxiety Detection,2022,Exclude,Exclude,Yes
+244,CAETFN: Context Adaptively Enhanced Text-Guided Fusion Network for Multimodal Sentiment Analysis,2025,Exclude,Exclude,Yes
+250,FMEFF Mechanism: A FastDTW-Based Music-EEG Feature Fusion Approach for Identifying Enjoyment Levels in Music Therapy,2026,Exclude,Exclude,Yes
+251,Wearable Device for Measuring EDA in Constant Alternating Current,2025,Exclude,Exclude,Yes
+255,"Scenario-Function System for Automotive Intelligent Cockpits: Framework, Research Progress and Perspectives",2024,Exclude,Exclude,Yes
+262,Affect Recognition in Immersive Room-Scale Environments: A Large-Scale VR Study With Custom Facial Sensing at the Scienc,2025,Exclude,Exclude,Yes
+264,Wearable Ear-Centric Physiological Sensing With On-Edge Physics-Informed Neural Networks for Negative Mental State Detec,2025,Exclude,Exclude,Yes
+276,EmoFusion: Anchor-Guided Multimodal Emotion Recognition With Emotion-Specific Token Learning and Cross-Modal Complement,2026,Exclude,Exclude,Yes
+281,Hybrid Source Selection Fusion Domain-Invariant Attention for Cross-Subject Emotion Recognition,2026,Exclude,Exclude,Yes
+282,Multimodal Self-Assessed Personality Estimation During Crowded Mingle Scenarios Using Wearables Devices and Cameras,2022,Exclude,Exclude,Yes
+283,TPFN: A Text-Guided Progressive Fusion Network for Multimodal Sentiment Analysis,2026,Exclude,Exclude,Yes
+286,DREAMER: A Database for Emotion Recognition Through EEG and ECG Signals From Wireless Low-cost Off-the-Shelf Devices,2018,Include,Include,Yes
+287,Automated Boredom Recognition Using Multimodal Physiological Signals,2026,Exclude,Exclude,Yes
+295,A Dual-Branch Dynamic Graph Convolution Based Adaptive TransFormer Feature Fusion Network for EEG Emotion Recognition,2022,Exclude,Exclude,Yes
+297,A Comprehensive Multimodal Humanoid System for Personality Assessment Based on the Big Five Model,2024,Exclude,Exclude,Yes
+299,MSMF-MIL: Multi-Scale Mixed Feature-Based Multiple Instance Learning for Speech Emotion Recognition,2025,Exclude,Exclude,Yes
+300,Emotion Recognition From Few-Channel EEG Signals by Integrating Deep Feature Aggregation and Transfer Learning,2024,Exclude,Exclude,Yes
+301,Automatic Emotion Recognition Using Temporal Multimodal Deep Learning,2020,Include,Include,Yes
+306,A Noncontact Emotion Recognition Method Based on Complexion and Heart Rate,2022,Include,Include,Yes
+307,Survey on Emotion Sensing Using Mobile Devices,2023,Exclude,Exclude,Yes
+312,Mobile Augmented Reality Based on Multimodal Inputs for Experiential Learning,2022,Exclude,Exclude,Yes
+315,Privacy-Preserving Facial Emotion Classification With Visual Micro-Doppler Signatures for Hearing Aid Applications,2025,Exclude,Exclude,Yes
+317,Advancing Secure and Privacy-Preserved Decision-Making in IoT-Enabled Consumer Electronics via Multimodal Data Fusion,2025,Exclude,Exclude,Yes
+321,Mutual Information Based Fusion Model (MIBFM): Mild Depression Recognition Using EEG and Pupil Area Signals,2023,Exclude,Exclude,Yes
+322,Hierarchical Transformer With Auxiliary Learning for Subject-Independent Respiration Emotion Recognition,2025,Exclude,Exclude,Yes
+324,Classification of Speech Emotion State Based on Feature Map Fusion of TCN and Pretrained CNN Model From Korean Speech Em,2025,Exclude,Exclude,Yes
+331,Enhancing Social Interaction for the Visually Impaired: A Systematic Review of Real-Time Emotion Recognition Using Smart,2025,Exclude,Exclude,Yes
+335,AuraVox: mmWave-Augmented Audio Pipeline for Nonintrusive Emotion Sensing in Complex IoT Environments,2026,Exclude,Exclude,Yes
+336,Neonatal Pain Speech Emotion Recognition Based on Multiscale Multilevel MAE Network,2026,Exclude,Exclude,Yes
+342,CLARE: Cognitive Load Assessment in Real-Time With Multimodal Data,2025,Exclude,Exclude,Yes
+349,A Trustworthy Method for Multimodal Emotion Recognition,2026,Exclude,Exclude,Yes
+353,Monitoring System for Patients Using Multimedia for Smart Healthcare,2018,Exclude,Exclude,Yes
+356,Descriptor: Clarkson University Affective Research Dataset (CUADS),2025,Include,Include,Yes
+358,Characterizing Autism Spectrum Disorder Through Fusion of Local Cortical Activation and Global Functional Connectivity U,2024,Exclude,Exclude,Yes
+359,Mediated Social Touch With Mobile Devices: A Review of Designs and Evaluations,2023,Exclude,Exclude,Yes
+367,CMD\$\textasciicircum\3\\$: Cross-Modal Decoupled Deformable Distillation for EEG-fNIRS Fusion,2026,Exclude,Exclude,Yes
+371,EgoTrigger: Toward Audio-Driven Image Capture for Human Memory Enhancement in All-Day Energy-Efficient Smart Glasses,2025,Exclude,Exclude,Yes
+377,Deep Fusion of Neurophysiological and Facial Features for Enhanced Emotion Detection,2025,Include,Include,Yes
+385,A facial expression emotion recognition based human-robot interaction system,2017,Exclude,Exclude,Yes
+386,Affective Video Content Analysis: Decade Review and New Perspectives,2025,Exclude,Exclude,Yes
+389,Emotion Recognition Using a Glasses-Type Wearable Device via Multi-Channel Facial Responses,2021,Include,Include,Yes
+394,Cross-Hierarchical Multi-Head Sparse Vision Transformer Network for Neonatal Pain Facial Expression Recognition,2026,Exclude,Exclude,Yes
+396,WiFE: WiFi and Vision Based Unobtrusive Emotion Recognition via Gesture and Facial Expression,2023,Exclude,Exclude,Yes
+397,"Multimodal Emotion Recognition: A Comprehensive Survey of Datasets, Methods, and Applications",2025,Exclude,Exclude,Yes
+402,Multimodal Sensor Fusion of Bone- and Air-Conducted Speech for Robust Emotion Recognition,2025,Exclude,Exclude,Yes
+404,Multimodal Daily-Life Emotional Recognition Using Heart Rate and Speech Data From Wearables,2024,Include,Include,Yes
+406,Wearable Eye-Tracking System for Synchronized Multimodal Data Acquisition,2024,Exclude,Exclude,Yes
+418,Emotion Recognition Through Facial Expressions: A Machine Learning Perspective in Mobile Multimedia,2025,Exclude,Exclude,Yes
+421,Behavioral and Physiological Signals-Based Deep Multimodal Approach for Mobile Emotion Recognition,2023,Include,Include,Yes
+425,Clustering-Based Emotion Recognition Micro-Service Cloud Framework for Mobile Computing,2020,Exclude,Exclude,Yes
+431,Lightweight Asymmetric Multimodal Fusion for Cross-Subject Emotion Recognition,2026,Include,Include,Yes
+435,A Novel Emotion Recognition Method Based on the Feature Fusion of Single-Lead EEG and ECG Signals,2024,Include,Include,Yes
+437,Automatic Depression Recognition With an Ensemble of Multimodal Spatio-Temporal Routing Features,2025,Exclude,Exclude,Yes
+438,Attention-Rectified and Texture-Enhanced Cross-Attention Transformer Feature Fusion Network for Facial Expression Recogn,2023,Exclude,Exclude,Yes
+443,CiABL: Completeness-Induced Adaptative Broad Learning for Cross-Subject Emotion Recognition With EEG and Eye Movement Si,2024,Include,Include,Yes
+453,Emotion Recognition in Consumer Electronics Using Multimodal Deep Learning,2025,Exclude,Exclude,Yes
+459,Optimized XGBoost for Multimodal Affective State Classification Using In-Ear PPG and Behind-the-Ear EEG Signals,2026,Include,Include,Yes
+463,Brain Region Knowledge-Based Dual-Stream Transformer for EEG Emotion Recognition,2025,Exclude,Exclude,Yes
+464,Emotion Recognition From Multimodal Physiological Signals via Discriminative Correlation Fusion With a Temporal Alignmen,2024,Include,Include,Yes
+465,Speech-Visual Emotion Recognition by Fusing Shared and Specific Features,2023,Include,Include,Yes

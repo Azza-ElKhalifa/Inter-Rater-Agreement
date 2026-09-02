@@ -1,0 +1,47 @@
+﻿Title,Authors,Year,Reviewer1_AE,Reviewer2_MK,Agreement
+DREAMER: A Database for Emotion Recognition Through EEG and ECG Signals From Wireless Low-cost Off-the-Shelf Devices,S. Katsigiannis and N. Ramzan,2018,Exclude,Exclude,Yes
+EmotionMeter: A Multimodal Framework for Recognizing Human Emotions.,"Zheng, Wei-Long and Liu, Wei and Lu, Yifei and Lu, Bao-Liang",2019,Include,Exclude,No (resolved)
+Automatic Emotion Recognition Using Temporal Multimodal Deep Learning,B. Nakisa and M. N. Rastgoo and A. Rakotonirainy and F. Mair,2020,Include,Include,Yes
+CNN and LSTM-Based Emotion Charting Using Physiological Signals,"Dar, M.N. and Akram, M.U. and Khawaja, S.G. and Pujari, A.N.",2020,Include,Include,Yes
+Can We Ditch Feature Engineering? End-to-End Deep Learning for Affect Recognition from Physiological Sensor Data.,"Dzieżyc, Maciej and Gjoreski, Martin and Kazienko, Przemysła",2020,Include,Include,Yes
+Emotion Recognition from Multimodal Physiological Signals for Emotion Aware Healthcare Systems,"Ayata, D. and Yaslan, Y. and Kamasak, M.E.",2020,Include,Include,Yes
+"K-EmoCon, a multimodal sensor dataset for continuous emotion recognition in naturalistic conversations","Park, C.Y. and Cha, N. and Kang, S. and Kim, A. and Khandoke",2020,Exclude,Exclude,Yes
+Multimodal affective state assessment using fNIRS+ EEG and spontaneous facial expression,"Sun, Y. and Ayaz, H. and Akansu, A.N.",2020,Include,Include,Yes
+A Wearable Head Mounted Display Bio-Signals Pad System for Emotion Recognition,"Wan, C. and Chen, D. and Huang, Z. and Luo, X.",2021,Exclude,Exclude,Yes
+"AMIGOS: A Dataset for Affect, Personality and Mood Research on Individuals and Groups",J. A. Miranda-Correa and M. K. Abadi and N. Sebe and I. Patr,2021,Exclude,Exclude,Yes
+Emotion Recognition Using a Glasses-Type Wearable Device via Multi-Channel Facial Responses,J. Kwon and J. Ha and D. -H. Kim and J. W. Choi and L. Kim,2021,Include,Include,Yes
+A Noncontact Emotion Recognition Method Based on Complexion and Heart Rate,G. Du and Q. Tan and C. Li and X. Wang and S. Teng and P. X.,2022,Include,Include,Yes
+A Resilient and Hierarchical IoT-Based Solution for Stress Monitoring in Everyday Settings,S. Jiang and F. Firouzi and K. Chakrabarty and E. B. Elbogen,2022,Include,Include,Yes
+A federated learning method for real-time emotion state classification from multi-modal streaming,"Nandi, A. and Xhafa, F.",2022,Include,Include,Yes
+"Emognition dataset: emotion recognition with self-reports, facial expressions, and physiology using wearables.","Saganowski, Stanisław and Komoszyńska, Joanna and Behnke, Ma",2022,Exclude,Exclude,Yes
+Evaluating Ensemble Learning Methods for Multi-Modal Emotion Recognition Using Sensor Data Fusion.,"Younis, Eman M. G. and Zaki, Someya Mohsen and Kanjo, Eiman ",2022,Include,Include,Yes
+Hybrid deep convolutional model-based emotion recognition using multiple physiological signals,"Patlar Akbulut, F.",2022,Include,Include,Yes
+Behavioral and Physiological Signals-Based Deep Multimodal Approach for Mobile Emotion Recognition,K. Yang and C. Wang and Y. Gu and Z. Sarsenbayeva and B. Tag,2023,Include,Include,Yes
+LSTM-Modeling of Emotion Recognition Using Peripheral Physiological Signals in Naturalistic Conversations,"Zitouni, M.S. and Park, C.Y. and Lee, U. and Hadjileontiadis",2023,Include,Include,Yes
+Speech-Visual Emotion Recognition by Fusing Shared and Specific Features,G. Chen and S. Jiao,2023,Exclude,Exclude,Yes
+A Novel Emotion Recognition Method Based on the Feature Fusion of Single-Lead EEG and ECG Signals,X. Wang and J. Zhang and C. He and H. Wu and L. Cheng,2024,Include,Include,Yes
+Artificial Intelligence Technology-Driven Teacher Mental State Assessment and Improvement Method,"Qin, Yang",2024,Include,Include,Yes
+CiABL: Completeness-Induced Adaptative Broad Learning for Cross-Subject Emotion Recognition With EEG and Eye Movement Si,X. Gong and C. L. P. Chen and B. Hu and T. Zhang,2024,Include,Include,Yes
+Deep Learning-Based Automated Emotion Recognition Using Multimodal Physiological Signals and Time-Frequency Methods,P. Sriram Kumar and P. K. Govarthan and A. Aleem Shaik Gadda,2024,Include,Include,Yes
+Dynamic Alignment and Fusion of Multimodal Physiological Patterns for Stress Recognition,X. Zhang and X. Wei and Z. Zhou and Q. Zhao and S. Zhang and,2024,Include,Include,Yes
+EmoWear: Wearable Physiological and Motion Dataset for Emotion Recognition and Context Awareness,"Rahmani, M.H. and Symons, M. and Sobhani, O. and Berkvens, R",2024,Exclude,Exclude,Yes
+Emotion Recognition From Multimodal Physiological Signals via Discriminative Correlation Fusion With a Temporal Alignmen,K. Hou and X. Zhang and Y. Yang and Q. Zhao and W. Yuan and ,2024,Include,Include,Yes
+Emotion recognition based on multimodal physiological signals using spiking feed-forward neural networks,"Yang, X. and Yan, H. and Zhang, A. and Xu, P. and Pan, S.H. ",2024,Include,Include,Yes
+End-to-End Multimodal Emotion Recognition Based on Facial Expressions and Remote Photoplethysmography Signals,"Li, J. and Peng, J.",2024,Include,Include,Yes
+Multi-physiological signal fusion for objective emotion recognition in educational human-computer interaction,"Wu, W. and Zuo, E. and Zhang, W. and Meng, X.",2024,Include,Include,Yes
+Multimodal Daily-Life Emotional Recognition Using Heart Rate and Speech Data From Wearables,E. Moon and A. S. M. Sharifuzzaman Sagar and H. S. Kim,2024,Include,Include,Yes
+A multimodal stress detection dataset with facial expressions and physiological signals.,"Hosseini, Majid and Sohrab, Fahad and Gottumukkala, Raju and",2025,Exclude,Exclude,Yes
+Advancing emotion recognition with Virtual Reality: A multimodal approach using physiological signals and machine learni,"Polo, E.M. and Iacomi, F. and Rey, A.V. and Ferraris, D. and",2025,Include,Include,Yes
+An ensemble deep learning framework for emotion recognition through wearable devices multi-modal physiological signals.,"Nandini, Durgesh and Yadav, Jyoti and Singh, Vijander and Mo",2025,Include,Include,Yes
+Deep Fusion of Neurophysiological and Facial Features for Enhanced Emotion Detection,F. Safavi and V. R. Venkannagari and D. Parikh and R. K. Vin,2025,Include,Include,Yes
+Descriptor: Clarkson University Affective Research Dataset (CUADS),T. C. Sweeney-Fanelli and A. Ahmed and M. H. Imtiaz,2025,Exclude,Exclude,Yes
+Emotion recognition in Virtual Reality using sensor fusion with eye tracking.,"Kuyucu, Meral and Sarikaya, Mehmet Ali and Karakaş, Tülay an",2025,Include,Include,Yes
+Switch fusion for continuous emotion estimation from multiple physiological signals,"Vu, N.T. and Huynh, V.T. and Kim, S.-W. and Shin, J.-E. and ",2025,Include,Include,Yes
+"""Are You Okay, Honey?"": Recognizing Emotions Among Couples Managing Diabetes in Daily Life Using Multimodal Real-World S","Boateng, George and Zhao, Xiangyu and Speichert, Malgorzata ",2026,Include,Include,Yes
+A GPTAssisted Multi Modal Emotion Intelligence Framework for Mental Health Predictive Analytics using Physiological Sign,"Thangarajan, T. and Ashokkumar, S.R. and Pandi, V. and Niyaz",2026,Include,Include,Yes
+"A Multimodal Dataset for Assessing Emotion, Stress, and Emotional Workload in Interpersonal Work Scenario","Lee, D. and Park, E. and Kim, G. and Han, Y. and Lee, U.",2026,Exclude,Exclude,Yes
+"Design, development, and validation of a multimodal synergy-based intuitive virtual and augmented reality therapy platfo","Olikkal, Parthan and Mebaghanje, Oritsejolomisan and Janeja,",2026,Exclude,Exclude,Yes
+Emotion recognition from auditory autonomous sensory meridian response (ASMR) using multi-modal physiological signals,"Gahlan, N. and Sethia, D.",2026,Include,Include,Yes
+Lightweight Asymmetric Multimodal Fusion for Cross-Subject Emotion Recognition,L. Zhou and Z. Wang and H. Li and S. Lei and X. Qin,2026,Include,Include,Yes
+Optimized XGBoost for Multimodal Affective State Classification Using In-Ear PPG and Behind-the-Ear EEG Signals,H. Barki and N. -D. Mai and W. -Y. Chung,2026,Include,Include,Yes
+ULER: An Ultra-Lightweight Joint Attention Model for Emotion Recognition from Multimodal Physiological Signals,"Liang, H. and Xu, G.-X. and Jiang, T. and Zhang, X. and Wu, ",2026,Include,Include,Yes
