@@ -1,7 +1,9 @@
 """
 Inter-Rater Agreement Analysis
 Calculates Cohen's Kappa (unweighted, linear-weighted, quadratic-weighted)
-with 95% confidence intervals for all review stages.
+with 95% confidence intervals for all review stages. Screening stages use the
+full screened sets; rating stages (RTFS and L1-L6) use the final eligible set
+of 33 articles. The comparison CSV files keep every rated study as a record.
 
 Reviewers:
   AE = Azza Elkhalifa (Primary Reviewer 1)
@@ -278,6 +280,7 @@ trs_overrides = {
 all_trs_a, all_trs_m = [], []
 for _, trs_row in trs_df.iterrows():
     sid = trs_row['Study_ID']
+    if sid in (17, 24): continue  # Qin and Wu excluded from the eligible set
     a_crit = azza_trs[sid][1]
     for j, cn in enumerate(criteria_names):
         a_val = 1 if a_crit[j] == 'Y' else 0
@@ -301,8 +304,9 @@ for inc_num in range(1, 37):
     for j, ln in enumerate(lim_names):
         row[f'AE_{ln}'] = a_scores[j]
         row[f'MK_{ln}'] = m_scores[j]
-        all_lim_a.append(a_scores[j])
-        all_lim_m.append(m_scores[j])
+        if inc_num not in (17, 24):  # eligible set only
+            all_lim_a.append(a_scores[j])
+            all_lim_m.append(m_scores[j])
     row['AE_Total'] = sum(a_scores)
     row['MK_Total'] = sum(m_scores)
     row['AE_Level'] = 'High' if sum(a_scores) >= 14 else 'Moderate'
@@ -449,7 +453,7 @@ k3, lo3, hi3 = kappa_bootstrap_ci(all_trs_a, all_trs_m)
 trs_agree = sum(1 for a, m in zip(all_trs_a, all_trs_m) if a == m)
 results.append(('RTFS criteria (unweighted)', len(all_trs_a), k3, lo3, hi3, 'unweighted'))
 print(f"\n3. RTFS CRITERIA ASSESSMENT")
-print(f"   n = {len(all_trs_a)} decisions (35 studies x 10 criteria)")
+print(f"   n = {len(all_trs_a)} decisions (33 eligible studies x 10 criteria)")
 print(f"   Agreements: {trs_agree}, Disagreements: {len(all_trs_a)-trs_agree}")
 print(f"   Percent agreement: {trs_agree/len(all_trs_a)*100:.1f}%")
 print(f"   Cohen's kappa = {k3:.4f}  [95% CI: {lo3:.4f} - {hi3:.4f}]")
@@ -458,11 +462,13 @@ print(f"   Cohen's kappa = {k3:.4f}  [95% CI: {lo3:.4f} - {hi3:.4f}]")
 print(f"\n   {'Criterion':<22} {'kappa':>7} {'95% CI':>20}")
 print(f"   {'-'*50}")
 for j, cn in enumerate(criteria_names):
-    a_c = [1 if azza_trs[madiha_to_inc[i+1]][1][j] == 'Y' else 0 for i in range(36) if madiha_to_inc[i+1] != 15]
+    a_c = [1 if azza_trs[madiha_to_inc[i+1]][1][j] == 'Y' else 0 for i in range(36) if madiha_to_inc[i+1] not in (15, 17, 24)]
     m_c = []
     for _, mr in mdf.iterrows():
         val = str(mr[trs_cols[j]]).strip().lower()
         m_c.append(1 if val in ['yes', 'y', '1', '1.0'] else 0)
+    _inc_seq = [madiha_to_inc[i+1] for i in range(36) if madiha_to_inc[i+1] != 15]
+    m_c = [v for v, _inc in zip(m_c, _inc_seq) if _inc not in (17, 24)]
     kc, lc, hc = kappa_bootstrap_ci(a_c, m_c)
     print(f"   {cn:<22} {kc:>7.4f} [{lc:.4f} - {hc:.4f}]")
 
@@ -475,7 +481,7 @@ results.append(('L1-L6 (linear weighted)', len(all_lim_a), k4_lin, lo4_lin, hi4_
 results.append(('L1-L6 (quadratic weighted)', len(all_lim_a), k4_quad, lo4_quad, hi4_quad, 'quadratic'))
 
 print(f"\n4. LIMITATION FRAMEWORK (L1-L6)")
-print(f"   n = {len(all_lim_a)} scores (35 studies x 6 criteria, ordinal 1-3)")
+print(f"   n = {len(all_lim_a)} scores (33 eligible studies x 6 criteria, ordinal 1-3)")
 print(f"   Agreements: {lim_agree}, Disagreements: {len(all_lim_a)-lim_agree}")
 print(f"   Percent agreement: {lim_agree/len(all_lim_a)*100:.1f}%")
 print(f"   Linear weighted kappa  = {k4_lin:.4f}  [95% CI: {lo4_lin:.4f} - {hi4_lin:.4f}]")
@@ -485,8 +491,8 @@ print(f"   Quadratic weighted kappa = {k4_quad:.4f}  [95% CI: {lo4_quad:.4f} - {
 print(f"\n   {'Criterion':<22} {'Linear k':>9} {'Quadratic k':>12} {'95% CI (quad)':>22}")
 print(f"   {'-'*66}")
 for j, ln in enumerate(lim_names):
-    a_l = [azza_lim[i+1][j] for i in range(36) if i+1 != 15]
-    m_l = [madiha_lim[i+1][j] for i in range(36) if i+1 != 15]
+    a_l = [azza_lim[i+1][j] for i in range(36) if i+1 not in (15, 17, 24)]
+    m_l = [madiha_lim[i+1][j] for i in range(36) if i+1 not in (15, 17, 24)]
     kl_lin, _, _ = kappa_bootstrap_ci(a_l, m_l, weights='linear')
     kl_quad, ll, lh = kappa_bootstrap_ci(a_l, m_l, weights='quadratic')
     print(f"   {ln:<22} {kl_lin:>9.4f} {kl_quad:>12.4f} [{ll:.4f} - {lh:.4f}]")
@@ -518,7 +524,7 @@ print(f"{'='*75}")
 # Hayam L1-L6 flat vectors (vs Azza's verified/consensus scores)
 hk_lim_a, hk_lim_h = [], []
 for i in range(1, 37):
-    if i == 15: continue  # Chen & Jiao excluded
+    if i in (15, 17, 24): continue  # Chen & Jiao excluded; Qin and Wu not in the eligible set
     hk_lim_a.extend(azza_lim[i])
     hk_lim_h.extend(hayam_lim[i])
 
@@ -692,6 +698,7 @@ madiha_4lv = {
 
 fl_a, fl_m = [], []
 for _s in sorted(azza_4lv):
+    if _s in (16, 23): continue  # Qin and Wu excluded from the eligible set
     fl_a.extend(azza_4lv[_s]); fl_m.extend(madiha_4lv[_s])
 fourlevel_final = {
     1: [2, 1, 0, 0, 3, 0, 0, 0, 1, 0],
@@ -773,7 +780,7 @@ k4f, lo4f, hi4f = kappa_bootstrap_ci(fl_a, fl_m, weights='quadratic')
 fl_agree = sum(1 for a, m in zip(fl_a, fl_m) if a == m)
 results.append(('RTFS four-level (quadratic)', len(fl_a), k4f, lo4f, hi4f, 'quadratic'))
 print(f"\nRTFS FOUR-LEVEL RE-CODING (A.E. vs M.K.)")
-print(f"   n = {len(fl_a)} decisions (35 studies x 10 criteria, ordinal 0-3)")
+print(f"   n = {len(fl_a)} decisions (33 eligible studies x 10 criteria, ordinal 0-3)")
 print(f"   Agreements: {fl_agree}/{len(fl_a)} = {fl_agree/len(fl_a)*100:.1f}%")
 print(f"   Quadratic weighted kappa = {k4f:.4f}  [95% CI: {lo4f:.4f} - {hi4f:.4f}]")
 
@@ -791,7 +798,7 @@ fourlevel_df = pd.DataFrame([
 
 # =============================================================================
 # 6h. PER-CRITERION PRE-CONSENSUS AGREEMENT
-#     Agreement counts per criterion (out of 35 studies each) for the RTFS
+#     Agreement counts per criterion (out of 33 eligible studies each) for the RTFS
 #     binary coding, the RTFS four-level re-coding, and the L1-L6 limitation
 #     ratings.
 # =============================================================================
@@ -805,15 +812,16 @@ _bin_pc = _per_crit(all_trs_a, all_trs_m, 10)
 _lim_pc = _per_crit(all_lim_a, all_lim_m, 6)
 _fla, _flm = [], []
 for _s in sorted(azza_4lv):
+    if _s in (16, 23): continue  # Qin and Wu excluded from the eligible set
     _fla.extend(azza_4lv[_s]); _flm.extend(madiha_4lv[_s])
 _fl_pc = _per_crit(_fla, _flm, 10)
-print("\nPER-CRITERION PRE-CONSENSUS AGREEMENT (out of 35 each)")
+print("\nPER-CRITERION PRE-CONSENSUS AGREEMENT (out of 33 each)")
 print("   RTFS binary:     " + ", ".join("%s %d" % (c, v) for c, v in zip(_crit10, _bin_pc))
-      + "   (total %d/350)" % sum(_bin_pc))
+      + "   (total %d/330)" % sum(_bin_pc))
 print("   RTFS four-level: " + ", ".join("%s %d" % (c, v) for c, v in zip(_crit10, _fl_pc))
-      + "   (total %d/350)" % sum(_fl_pc))
+      + "   (total %d/330)" % sum(_fl_pc))
 print("   Limitations:     " + ", ".join("%s %d" % (c, v) for c, v in zip(_crit6, _lim_pc))
-      + "   (total %d/210)" % sum(_lim_pc))
+      + "   (total %d/198)" % sum(_lim_pc))
 results_percrit = {
     'rtfs_binary': dict(zip(_crit10, _bin_pc)),
     'rtfs_fourlevel': dict(zip(_crit10, _fl_pc)),

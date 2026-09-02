@@ -8,10 +8,10 @@ Assessment                              n   Kappa                 95% CI      We
 ----------------------------------------------------------------------------------
 Title-abstract screening              170  0.9702 [0.9228 - 1.0000]   unweighted
 Full-text screening                    46  0.9421 [0.7875 - 1.0000]   unweighted
-RTFS criteria (unweighted)            350  0.9617 [0.9288 - 0.9876]   unweighted
-L1-L6 (linear weighted)               210  0.9370 [0.8962 - 0.9704]       linear
-L1-L6 (quadratic weighted)            210  0.9530 [0.9213 - 0.9786]    quadratic
-RTFS four-level (quadratic)           350  0.9666 [0.9225 - 0.9967]    quadratic
+RTFS criteria (unweighted)            330  0.9657 [0.9322 - 0.9931]   unweighted
+L1-L6 (linear weighted)               198  0.9470 [0.9069 - 0.9801]       linear
+L1-L6 (quadratic weighted)            198  0.9606 [0.9304 - 0.9852]    quadratic
+RTFS four-level (quadratic)           330  0.9650 [0.9203 - 0.9966]    quadratic
 ----------------------------------------------------------------------------------
 Data extraction: extracted independently by both reviewers; all discrepancies
 resolved by consensus with the original articles (no percent-agreement reported).
@@ -25,8 +25,8 @@ she did not perform independent full-text include/exclude screening.
 Stage (Hayam vs primary)                n   Kappa                 95% CI      Weights
 ----------------------------------------------------------------------------------
 Title-abstract screening              170  0.9260 [0.8551 - 0.9838]   unweighted
-Quality L1-L6 (linear)                210  0.8893 [0.8341 - 0.9355]       linear
-Quality L1-L6 (quadratic)             210  0.9184 [0.8762 - 0.9528]    quadratic
+Quality L1-L6 (linear)                198  0.8830 [0.8271 - 0.9323]       linear
+Quality L1-L6 (quadratic)             198  0.9139 [0.8711 - 0.9503]    quadratic
 ----------------------------------------------------------------------------------
 
 Interpretation (Landis & Koch, 1977):
