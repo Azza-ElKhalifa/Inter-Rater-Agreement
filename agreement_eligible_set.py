@@ -1,5 +1,6 @@
 # Inter-rater agreement on the final eligible set (33 articles):
-# four-level RTFP (330 ratings) and L1-L6 (198 ratings),
+# four-level RTFP (330 ratings), L1-L6 (198 ratings), and the
+# independent-reviewer L1-L6 agreement (198 ratings);
 # Cohen's kappa with 95% bootstrap CI (2000 iterations, seed 42).
 import csv
 import numpy as np
@@ -23,7 +24,9 @@ four = [r for r in csv.DictReader(open('rtfs_fourlevel_comparison.csv', encoding
         if not r['Study'].lower().startswith(('qin', 'wu'))]
 lims = [r for r in csv.DictReader(open('limitation_scores_comparison.csv', encoding='utf-8-sig'))
         if not r['Study'].lower().startswith(('qin', 'wu'))]
-assert len(four) == len(lims) == 33
+three = [r for r in csv.DictReader(open('limitation_scores_three_reviewers.csv', encoding='utf-8-sig'))
+         if not r['Study'].lower().startswith(('qin', 'wu'))]
+assert len(four) == len(lims) == len(three) == 33
 
 ae4 = [int(r[f'AE_C{c}']) for r in four for c in range(1, 11)]
 mk4 = [int(r[f'MK_C{c}']) for r in four for c in range(1, 11)]
@@ -32,10 +35,13 @@ aeL = [int(r[f'AE_L{i}_{n}']) for r in lims for i, n in enumerate(names, 1)]
 mkL = [int(r[f'MK_L{i}_{n}']) for r in lims for i, n in enumerate(names, 1)]
 
 lines = ['Inter-rater agreement, final eligible set (33 articles)', '=' * 55, '']
+aeH = [int(r[f'AE_L{i}_{n}']) for r in three for i, n in enumerate(names, 1)]
+hyL = [int(r[f'HY_L{i}_{n}']) for r in three for i, n in enumerate(names, 1)]
 res = [
     ('Four-level RTFP (quadratic)', ae4, mk4, 'quadratic'),
     ('L1-L6 limitations (quadratic)', aeL, mkL, 'quadratic'),
     ('L1-L6 limitations (linear)', aeL, mkL, 'linear'),
+    ('Independent reviewer L1-L6 (quadratic)', aeH, hyL, 'quadratic'),
 ]
 for name, a, b, w in res:
     k, lo, hi = kappa_bootstrap_ci(a, b, weights=w)

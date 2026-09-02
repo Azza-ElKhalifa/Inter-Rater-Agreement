@@ -12,9 +12,9 @@ The final synthesis includes 33 peer-reviewed empirical journal articles. Two re
 
 | File | Description |
 |------|-------------|
-| `studies_extraction_33.csv` | Study-level data extraction for the 33 included articles (19 fields) |
+| `studies_extraction_33.csv` | Study-level data extraction for the 33 included articles (20 fields) |
 | `fulltext_exclusion_log.csv` | The 13 full-text exclusions, each with citation and specific reason |
-| `agreement_eligible_set.py` | Inter-rater agreement on the eligible set: four-level RTFP (330 ratings) and L1-L6 (198 ratings), with bootstrap 95% CIs |
+| `agreement_eligible_set.py` | Inter-rater agreement on the eligible set: four-level RTFP (330 ratings), L1-L6 (198 ratings), and the independent-reviewer L1-L6 agreement, with bootstrap 95% CIs |
 | `agreement_eligible_set_results.txt` | Output of `agreement_eligible_set.py` |
 | `reported_counts.py` | Recomputes every descriptive count reported in the manuscript |
 
@@ -65,7 +65,7 @@ Files listing 35 studies predate the final eligibility audit, in which Qin (2024
 | Four-level RTFP, eligible studies | 330 | 0.97 | 0.92-1.00 | Quadratic |
 | Limitation ratings, eligible studies | 198 | 0.96 | 0.93-0.99 | Quadratic |
 | Validation reviewer: title/abstract | 170 | 0.93 | 0.86-0.98 | Unweighted |
-| Validation reviewer: limitations | 210 | 0.92 | 0.88-0.95 | Quadratic |
+| Validation reviewer: limitations | 198 | 0.91 | 0.87-0.95 | Quadratic |
 
 CIs from a 2000-iteration bootstrap of rating pairs (seed 42). Interpretation follows Landis and Koch (1977): 0.81-1.00, almost perfect.
 
