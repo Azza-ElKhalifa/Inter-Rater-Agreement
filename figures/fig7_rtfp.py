@@ -20,7 +20,7 @@ def col(c):
 domains = [
     ('Technical validation', 'C3–C4', [3, 4]),
     ('Naturalistic/longitudinal', 'C2, C5', [2, 5]),
-    ('Human factors/usability', 'C1, C6', [1, 6]),
+    ('Wearable sensing and explainability', 'C1, C6', [1, 6]),
     ('Application utility', 'C9', [9]),
     ('Safety/privacy/security', 'C7–C8', [7, 8]),
     ('Regulation/implementation', 'C10', [10]),

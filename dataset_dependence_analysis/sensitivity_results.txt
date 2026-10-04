@@ -3,7 +3,7 @@ Dataset-dependence sensitivity analysis
 
 Full set (n = 33)
   High-severity limitations: L1 18.2%; L2 6.1%; L3 84.8%; L4 24.2%; L5 42.4%; L6 3.0%
-  C3-C4 not reported: 71.2%
+  C3-C4 not reported: 68.2%
   C2,C5 not reported: 53.0%
   C7-C8 not reported: 77.3%
   C1,C6 implemented: 45.5%
@@ -12,7 +12,7 @@ Full set (n = 33)
 
 Reduced set (one representative per repeated public dataset) (n = 26)
   High-severity limitations: L1 23.1%; L2 7.7%; L3 80.8%; L4 26.9%; L5 53.8%; L6 3.8%
-  C3-C4 not reported: 73.1%
+  C3-C4 not reported: 69.2%
   C2,C5 not reported: 48.1%
   C7-C8 not reported: 75.0%
   C1,C6 implemented: 50.0%
@@ -26,7 +26,7 @@ Absolute change, reduced vs full (percentage points):
   L4 high: +2.7
   L5 high: +11.4
   L6 high: +0.8
-  C3-C4 not reported: +1.9
+  C3-C4 not reported: +1.0
   C2,C5 not reported: -5.0
   C7-C8 not reported: -2.3
   C1,C6 implemented: +4.5
@@ -34,17 +34,17 @@ Absolute change, reduced vs full (percentage points):
   C10 not reported: +0.0
 
 Leave-one-dataset-out (all articles with that primary dataset removed):
-  Without DEAP (n = 28): L3 high 82.1%; C3-C4 NR 71.4%; C2,C5 NR 46.4%; C10 NR 100.0%
-  Without WESAD (n = 31): L3 high 83.9%; C3-C4 NR 71.0%; C2,C5 NR 54.8%; C10 NR 100.0%
-  Without CASE (n = 31): L3 high 83.9%; C3-C4 NR 72.6%; C2,C5 NR 51.6%; C10 NR 100.0%
-  Without MAHNOB-HCI (n = 31): L3 high 83.9%; C3-C4 NR 71.0%; C2,C5 NR 53.2%; C10 NR 100.0%
-  Without AMIGOS (n = 32): L3 high 84.4%; C3-C4 NR 71.9%; C2,C5 NR 53.1%; C10 NR 100.0%
-  Without K-EmoCon (n = 32): L3 high 84.4%; C3-C4 NR 71.9%; C2,C5 NR 54.7%; C10 NR 100.0%
-  Without SEED (n = 32): L3 high 84.4%; C3-C4 NR 73.4%; C2,C5 NR 51.6%; C10 NR 100.0%
-  Without UBFC-Phys (n = 32): L3 high 84.4%; C3-C4 NR 71.9%; C2,C5 NR 51.6%; C10 NR 100.0%
-  Without DECAF (n = 32): L3 high 84.4%; C3-C4 NR 71.9%; C2,C5 NR 51.6%; C10 NR 100.0%
-  Without POPANE (n = 32): L3 high 84.4%; C3-C4 NR 70.3%; C2,C5 NR 51.6%; C10 NR 100.0%
-  Without TERS-ER (n = 32): L3 high 87.5%; C3-C4 NR 70.3%; C2,C5 NR 54.7%; C10 NR 100.0%
-  Without EMOGNITION (n = 32): L3 high 84.4%; C3-C4 NR 70.3%; C2,C5 NR 53.1%; C10 NR 100.0%
+  Without DEAP (n = 28): L3 high 82.1%; C3-C4 NR 67.9%; C2,C5 NR 46.4%; C10 NR 100.0%
+  Without WESAD (n = 31): L3 high 83.9%; C3-C4 NR 67.7%; C2,C5 NR 54.8%; C10 NR 100.0%
+  Without CASE (n = 31): L3 high 83.9%; C3-C4 NR 69.4%; C2,C5 NR 51.6%; C10 NR 100.0%
+  Without MAHNOB-HCI (n = 31): L3 high 83.9%; C3-C4 NR 67.7%; C2,C5 NR 53.2%; C10 NR 100.0%
+  Without AMIGOS (n = 32): L3 high 84.4%; C3-C4 NR 68.8%; C2,C5 NR 53.1%; C10 NR 100.0%
+  Without K-EmoCon (n = 32): L3 high 84.4%; C3-C4 NR 68.8%; C2,C5 NR 54.7%; C10 NR 100.0%
+  Without SEED (n = 32): L3 high 84.4%; C3-C4 NR 70.3%; C2,C5 NR 51.6%; C10 NR 100.0%
+  Without UBFC-Phys (n = 32): L3 high 84.4%; C3-C4 NR 68.8%; C2,C5 NR 51.6%; C10 NR 100.0%
+  Without DECAF (n = 32): L3 high 84.4%; C3-C4 NR 68.8%; C2,C5 NR 51.6%; C10 NR 100.0%
+  Without POPANE (n = 32): L3 high 84.4%; C3-C4 NR 67.2%; C2,C5 NR 51.6%; C10 NR 100.0%
+  Without TERS-ER (n = 32): L3 high 87.5%; C3-C4 NR 67.2%; C2,C5 NR 54.7%; C10 NR 100.0%
+  Without EMOGNITION (n = 32): L3 high 84.4%; C3-C4 NR 67.2%; C2,C5 NR 53.1%; C10 NR 100.0%
 
 Largest absolute change in the reduced set: 11.4 percentage points.

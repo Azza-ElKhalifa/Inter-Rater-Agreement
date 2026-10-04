@@ -64,7 +64,7 @@ for L in ['L1', 'L2', 'L3', 'L4', 'L5', 'L6']:
     print(f'  {L}: high {hi}/33 ({hi/33*100:.1f}%), mean {sum(v)/33:.2f}')
 
 domains = [('Technical validation', [3, 4]), ('Naturalistic/longitudinal', [2, 5]),
-           ('Human factors/usability', [1, 6]), ('Application utility', [9]),
+           ('Wearable sensing and explainability', [1, 6]), ('Application utility', [9]),
            ('Safety/privacy/security', [7, 8]), ('Regulation/implementation', [10])]
 print('\nRTFP domain profile (not reported / discussed / implemented / evaluated):')
 for name, cs in domains:
