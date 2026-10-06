@@ -31,10 +31,12 @@ lim_categories = OrderedDict([
 
 n_cats = len(lim_categories)
 n_papers = len(lim_rows)
-matrix = np.zeros((n_cats, n_papers), dtype=int)
+matrix = np.full((n_cats, n_papers), np.nan)
 for j, r in enumerate(lim_rows):
     for i, L in enumerate(['L1', 'L2', 'L3', 'L4', 'L5', 'L6']):
-        matrix[i, j] = int(r[L]) - 1
+        v = str(r[L]).strip()
+        if v.isdigit():
+            matrix[i, j] = int(v) - 1
 
 def author_label(p):
     authors = str(p.get('Authors', ''))
@@ -49,7 +51,8 @@ fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(28, 11),
                                gridspec_kw={'width_ratios': [2.5, 1]})
 
 cmap = ListedColormap([HEATMAP_GREEN, HEATMAP_YELLOW, HEATMAP_PINK])
-ax1.imshow(matrix, cmap=cmap, aspect='auto', interpolation='nearest', vmin=0, vmax=2)
+cmap.set_bad('#D9D9D9')
+ax1.imshow(np.ma.masked_invalid(matrix), cmap=cmap, aspect='auto', interpolation='nearest', vmin=0, vmax=2)
 
 ax1.set_xticks(np.arange(n_papers))
 ax1.set_yticks(np.arange(n_cats))
@@ -66,9 +69,10 @@ ax1.text(0, 1.02, r'$\bf{a}$', fontsize=24, transform=ax1.transAxes, ha='left', 
 # Panel (b): stacked horizontal bars
 low_pct, mod_pct, high_pct = [], [], []
 for i in range(n_cats):
-    low_pct.append(np.sum(matrix[i] == 0) / n_papers * 100)
-    mod_pct.append(np.sum(matrix[i] == 1) / n_papers * 100)
-    high_pct.append(np.sum(matrix[i] == 2) / n_papers * 100)
+    n_valid = int(np.sum(~np.isnan(matrix[i])))
+    low_pct.append(np.sum(matrix[i] == 0) / n_valid * 100)
+    mod_pct.append(np.sum(matrix[i] == 1) / n_valid * 100)
+    high_pct.append(np.sum(matrix[i] == 2) / n_valid * 100)
 for L, lo, mo, hi in zip(cat_labels, low_pct, mod_pct, high_pct):
     print(f'  {L}: low {lo:.1f}% | moderate {mo:.1f}% | high {hi:.1f}%')
 
@@ -91,8 +95,9 @@ ax2.text(0, 1.02, r'$\bf{b}$', fontsize=24, transform=ax2.transAxes, ha='left', 
 low_patch = mpatches.Patch(facecolor=HEATMAP_GREEN, edgecolor='gray', label='Low')
 mod_patch = mpatches.Patch(facecolor=HEATMAP_YELLOW, edgecolor='gray', label='Moderate')
 high_patch = mpatches.Patch(facecolor=HEATMAP_PINK, edgecolor='gray', label='High')
+unclear_patch = mpatches.Patch(facecolor='#D9D9D9', edgecolor='gray', label='Unclear')
 
-fig.legend(handles=[low_patch, mod_patch, high_patch],
+fig.legend(handles=[low_patch, mod_patch, high_patch, unclear_patch],
            title='Limitation levels:', title_fontsize=24,
            loc='lower right', bbox_to_anchor=(1.0, 0.02),
            fontsize=22, frameon=True, fancybox=True)

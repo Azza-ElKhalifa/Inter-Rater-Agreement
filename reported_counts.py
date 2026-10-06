@@ -59,9 +59,9 @@ print('\nFusion strategies (>=2):', {k: v for k, v in fus.most_common() if v >= 
 
 print('\nLimitation profile (high severity, mean):')
 for L in ['L1', 'L2', 'L3', 'L4', 'L5', 'L6']:
-    v = [int(r[L]) for r in lims]
+    v = [int(r[L]) for r in lims if str(r[L]).strip().isdigit()]
     hi = sum(1 for x in v if x == 3)
-    print(f'  {L}: high {hi}/33 ({hi/33*100:.1f}%), mean {sum(v)/33:.2f}')
+    print(f'  {L}: high {hi}/{len(v)} ({hi/len(v)*100:.1f}%), mean {sum(v)/len(v):.2f}')
 
 domains = [('Technical validation', [3, 4]), ('Naturalistic/longitudinal', [2, 5]),
            ('Wearable sensing and explainability', [1, 6]), ('Application utility', [9]),

@@ -20,11 +20,11 @@ rtfp = list(csv.DictReader(open('rtfp_fourlevel_33.csv', encoding='utf-8-sig')))
 assert len(assign) == len(lims) == len(rtfp) == 33
 
 def lim_profile(idx):
-    n = len(idx)
     out = {}
     for L in ['L1', 'L2', 'L3', 'L4', 'L5', 'L6']:
-        hi = sum(1 for i in idx if int(lims[i][L]) == 3)
-        out[L] = hi / n * 100
+        vals = [int(lims[i][L]) for i in idx if str(lims[i][L]).strip().isdigit()]
+        hi = sum(1 for v in vals if v == 3)
+        out[L] = hi / len(vals) * 100
     return out
 
 def rtfp_profile(idx):
