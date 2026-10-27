@@ -1,6 +1,6 @@
 # Figure 7: (a) four-level RTFP domain profile, (b) main reporting gaps,
-# (c) seven recommendations for future studies (33 included studies).
-# Requires: rtfp_fourlevel_33.csv (same folder).
+# (c) seven recommendations for future studies (37 included studies).
+# Requires: rtfp_fourlevel_37.csv (same folder).
 import csv
 from collections import Counter
 
@@ -10,9 +10,9 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
 import matplotlib.patches as mpatches
 
-rows = list(csv.DictReader(open('rtfp_fourlevel_33.csv', encoding='utf-8-sig')))
+rows = list(csv.DictReader(open('rtfp_fourlevel_37.csv', encoding='utf-8-sig')))
 N = len(rows)
-assert N == 33
+assert N == 37
 
 def col(c):
     return [int(r[f'C{c}']) for r in rows]

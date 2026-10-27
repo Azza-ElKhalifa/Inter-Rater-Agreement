@@ -3,10 +3,10 @@
 import csv
 from collections import Counter
 
-papers = list(csv.DictReader(open('studies_extraction_33.csv', encoding='utf-8-sig')))
-lims = list(csv.DictReader(open('dataset_dependence_analysis/limitations_33.csv', encoding='utf-8-sig')))
-rtfp = list(csv.DictReader(open('dataset_dependence_analysis/rtfp_fourlevel_33.csv', encoding='utf-8-sig')))
-assert len(papers) == len(lims) == len(rtfp) == 33
+papers = list(csv.DictReader(open('studies_extraction_37.csv', encoding='utf-8-sig')))
+lims = list(csv.DictReader(open('dataset_dependence_analysis/limitations_37.csv', encoding='utf-8-sig')))
+rtfp = list(csv.DictReader(open('dataset_dependence_analysis/rtfp_fourlevel_37.csv', encoding='utf-8-sig')))
+assert len(papers) == len(lims) == len(rtfp) == 37
 
 print('Included studies:', len(papers))
 

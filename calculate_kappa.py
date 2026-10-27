@@ -110,6 +110,10 @@ azza_trs = {
     34: ("Barki et al. (2026)",        ['Y','N','Y','N','N','N','N','N','N','N']),
     35: ("Liang et al. (2026)",        ['Y','N','N','Y','N','N','N','Y','N','N']),
     36: ("Gahlan & Sethia (2026)",     ['Y','N','Y','N','N','N','N','Y','Y','N']),
+    37: ("Katsigiannis & Ramzan (2018)", []),
+    38: ("Miranda-Correa et al. (2021)", []),
+    39: ("Hosseini et al. (2025)",       []),
+    40: ("Lee et al. (2026)",            []),
 }
 
 # ═════════════════════════════════════════════════════════════════════════════
@@ -134,6 +138,8 @@ azza_lim = {
     28: [2,2,3,2,2,2],   29: [1,2,2,1,3,3],   30: [2,2,3,1,2,1],
     31: [2,3,1,2,3,3],   32: [2,2,3,2,1,3],   33: [2,2,3,1,1,3],
     34: [2,2,3,2,3,2],   35: [2,2,3,2,1,3],   36: [2,2,3,1,3,2],
+    37: [2,2,3,3,3,1],   38: [2,2,3,1,3,1],   39: [2,2,3,1,3,2],
+    40: [2,3,2,1,3,1],
 }
 
 # Madiha's pre-discussion scores (7 one-level disagreements)
@@ -145,6 +151,10 @@ madiha_lim[14][4] = 1   # Study 14, L5: Azza=2 Madiha=1 (borderline dataset scop
 madiha_lim[20][2] = 2   # Study 20, L3: Azza=3 Madiha=2 (borderline lab conditions)
 madiha_lim[24][0] = 2   # Study 24, L1: Azza=3 Madiha=2 (borderline sample size)
 madiha_lim[27][3] = 2   # Study 27, L4: Azza=3 Madiha=2 (borderline validation)
+madiha_lim[37] = [2,2,3,2,2,1]
+madiha_lim[38] = [2,2,2,1,1,1]
+madiha_lim[39] = [2,2,3,1,2,2]
+madiha_lim[40] = [2,2,2,1,2,1]
 
 # ═════════════════════════════════════════════════════════════════════════════
 # 2b. DATA: Hayam Yassin (HY) — INDEPENDENT VALIDATION REVIEWER
@@ -167,6 +177,7 @@ hayam_lim = {
     25: [1,2,2,3,2,2],  26: [2,2,2,1,3,2],  27: [2,2,3,3,2,1],  28: [2,2,3,2,2,2],
     29: [1,2,2,1,3,3],  30: [1,2,2,1,2,1],  31: [2,3,1,2,3,3],  32: [2,2,3,2,1,3],
     33: [2,2,3,1,2,3],  34: [2,2,3,2,3,3],  35: [2,2,3,2,1,3],  36: [2,2,3,1,3,2],
+    37: [2,3,3,2,3,1],  38: [2,2,2,1,2,1],  39: [2,2,2,1,2,2],  40: [2,3,2,1,2,3],
 }
 
 # ── L6 re-scored: Construct & Reference-Standard Validity ─────────────────────
@@ -295,7 +306,7 @@ for _, trs_row in trs_df.iterrows():
 all_lim_a, all_lim_m = [], []
 lim_rows = []
 
-for inc_num in range(1, 37):
+for inc_num in range(1, 41):
     if inc_num in (15, 17, 24): continue  # Chen & Jiao excluded; Qin and Wu not in the eligible set
     study_name = azza_trs[inc_num][0]
     a_scores = azza_lim[inc_num]
@@ -482,7 +493,7 @@ results.append(('L1-L6 (linear weighted)', len(all_lim_a), k4_lin, lo4_lin, hi4_
 results.append(('L1-L6 (quadratic weighted)', len(all_lim_a), k4_quad, lo4_quad, hi4_quad, 'quadratic'))
 
 print(f"\n4. LIMITATION FRAMEWORK (L1-L6)")
-print(f"   n = {len(all_lim_a)} scores (33 eligible studies x 6 criteria, ordinal 1-3)")
+print(f"   n = {len(all_lim_a)} scores (37 eligible studies x 6 criteria, ordinal 1-3)")
 print(f"   Agreements: {lim_agree}, Disagreements: {len(all_lim_a)-lim_agree}")
 print(f"   Percent agreement: {lim_agree/len(all_lim_a)*100:.1f}%")
 print(f"   Linear weighted kappa  = {k4_lin:.4f}  [95% CI: {lo4_lin:.4f} - {hi4_lin:.4f}]")
@@ -492,8 +503,8 @@ print(f"   Quadratic weighted kappa = {k4_quad:.4f}  [95% CI: {lo4_quad:.4f} - {
 print(f"\n   {'Criterion':<22} {'Linear k':>9} {'Quadratic k':>12} {'95% CI (quad)':>22}")
 print(f"   {'-'*66}")
 for j, ln in enumerate(lim_names):
-    a_l = [azza_lim[i+1][j] for i in range(36) if i+1 not in (15, 17, 24)]
-    m_l = [madiha_lim[i+1][j] for i in range(36) if i+1 not in (15, 17, 24)]
+    a_l = [azza_lim[i+1][j] for i in range(40) if i+1 not in (15, 17, 24)]
+    m_l = [madiha_lim[i+1][j] for i in range(40) if i+1 not in (15, 17, 24)]
     kl_lin, _, _ = kappa_bootstrap_ci(a_l, m_l, weights='linear')
     kl_quad, ll, lh = kappa_bootstrap_ci(a_l, m_l, weights='quadratic')
     print(f"   {ln:<22} {kl_lin:>9.4f} {kl_quad:>12.4f} [{ll:.4f} - {lh:.4f}]")
@@ -524,7 +535,7 @@ print(f"{'='*75}")
 
 # Hayam L1-L6 flat vectors (vs Azza's verified/consensus scores)
 hk_lim_a, hk_lim_h = [], []
-for i in range(1, 37):
+for i in range(1, 41):
     if i in (15, 17, 24): continue  # Chen & Jiao excluded; Qin and Wu not in the eligible set
     hk_lim_a.extend(azza_lim[i])
     hk_lim_h.extend(hayam_lim[i])
@@ -573,7 +584,7 @@ print(f"   Quadratic weighted kappa = {kh_quad:.4f}  [95% CI: {lo_quad:.4f} - {h
 
 # Build Hayam three-reviewer L1-L6 comparison table (AE / MK / HK), totals recomputed
 hk_rows = []
-for i in range(1, 37):
+for i in range(1, 41):
     if i in (15, 17, 24): continue  # Chen & Jiao excluded; Qin and Wu not in the eligible set
     a_s, m_s, h_s = azza_lim[i], madiha_lim[i], hayam_lim[i]
     row = {'Study_ID': i, 'Study': azza_trs[i][0]}
@@ -601,13 +612,32 @@ hk_ta_df = pd.DataFrame({
 # number the 35 retained studies 1..35 without a gap; the data files match that here.
 # (Applied only to the output tables, after all kappa computations, so agreement
 #  statistics are unaffected.)
+CUR_TO_NEW = {1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 10, 9: 11, 10: 12,
+              11: 13, 12: 14, 13: 15, 14: 16, 15: 17, 16: 18, 17: 19, 18: 20,
+              19: 21, 20: 22, 21: 23, 22: 24, 23: 25, 24: 26, 25: 27, 26: 28,
+              27: 29, 28: 31, 29: 32, 30: 33, 31: 34, 32: 35, 33: 36}
+
+def _lim_key_order(k):
+    extra = {37: 1, 38: 9, 39: 30, 40: 37}
+    if k in extra:
+        return extra[k]
+    return CUR_TO_NEW[k - sum(1 for d in (15, 17, 24) if d < k)]
+
+def _fl_key_order(k):
+    extra = {36: 1, 37: 9, 38: 30, 39: 37}
+    if k in extra:
+        return extra[k]
+    return CUR_TO_NEW[k - sum(1 for d in (16, 23) if d < k)]
+
 trs_df = trs_df.sort_values('Study_ID').reset_index(drop=True)
 trs_df['Study_ID'] = range(1, len(trs_df) + 1)
-lim_df = lim_df.sort_values('Study_ID').reset_index(drop=True)
-lim_df['Study_ID'] = range(1, len(lim_df) + 1)
+lim_df['__o'] = lim_df['Study_ID'].map(_lim_key_order)
+lim_df = lim_df.sort_values('__o').drop(columns='__o').reset_index(drop=True)
+lim_df['Study_ID'] = lim_df.index + 1
 if 'Study_ID' in hayam_lim_df.columns:
-    hayam_lim_df = hayam_lim_df.sort_values('Study_ID').reset_index(drop=True)
-    hayam_lim_df['Study_ID'] = range(1, len(hayam_lim_df) + 1)
+    hayam_lim_df['__o'] = hayam_lim_df['Study_ID'].map(_lim_key_order)
+    hayam_lim_df = hayam_lim_df.sort_values('__o').drop(columns='__o').reset_index(drop=True)
+    hayam_lim_df['Study_ID'] = hayam_lim_df.index + 1
 
 
 
@@ -657,6 +687,10 @@ azza_4lv = {
     33: [2, 1, 3, 0, 0, 0, 0, 0, 1, 0],
     34: [2, 1, 3, 3, 0, 0, 0, 1, 1, 0],
     35: [2, 0, 3, 0, 0, 0, 0, 1, 1, 0],
+    36: [2, 1, 0, 0, 0, 0, 0, 0, 1, 0],
+    37: [2, 1, 3, 0, 1, 0, 0, 0, 1, 0],
+    38: [2, 1, 3, 0, 1, 0, 1, 2, 1, 0],
+    39: [2, 1, 3, 0, 0, 0, 2, 2, 1, 0],
 }
 
 madiha_4lv = {
@@ -695,6 +729,10 @@ madiha_4lv = {
     33: [2, 1, 3, 0, 0, 0, 0, 0, 1, 0],
     34: [2, 1, 3, 3, 0, 0, 0, 1, 1, 0],
     35: [2, 0, 3, 0, 0, 0, 0, 1, 1, 0],
+    36: [3, 1, 0, 0, 0, 1, 1, 0, 1, 0],
+    37: [3, 1, 3, 0, 1, 2, 1, 1, 1, 0],
+    38: [3, 1, 3, 0, 1, 2, 2, 2, 1, 0],
+    39: [3, 1, 3, 0, 1, 1, 2, 2, 2, 1],
 }
 
 fl_a, fl_m = [], []
@@ -705,7 +743,7 @@ fourlevel_final = {
     1: [2, 1, 0, 0, 3, 0, 0, 0, 1, 0],
     2: [2, 1, 3, 0, 1, 0, 0, 0, 0, 0],
     3: [2, 1, 0, 3, 0, 0, 2, 0, 1, 0],
-    4: [2, 2, 3, 0, 2, 0, 0, 0, 1, 0],
+    4: [2, 1, 3, 0, 2, 0, 0, 0, 1, 0],
     5: [1, 0, 3, 0, 0, 0, 0, 0, 1, 0],
     6: [2, 1, 0, 0, 0, 0, 0, 0, 1, 0],
     7: [2, 1, 0, 0, 0, 0, 0, 0, 1, 0],
@@ -715,7 +753,7 @@ fourlevel_final = {
     11: [2, 2, 3, 0, 2, 0, 0, 0, 1, 0],
     12: [2, 1, 0, 0, 0, 1, 2, 0, 1, 0],
     13: [2, 1, 3, 0, 0, 0, 2, 1, 1, 0],
-    14: [2, 2, 3, 0, 2, 2, 0, 1, 1, 0],
+    14: [2, 1, 3, 0, 2, 2, 0, 1, 1, 0],
     15: [1, 1, 0, 0, 0, 0, 0, 0, 1, 0],
     16: [2, 1, 0, 0, 0, 0, 2, 2, 1, 1],
     17: [1, 0, 3, 3, 0, 3, 0, 0, 1, 0],
@@ -726,10 +764,10 @@ fourlevel_final = {
     22: [0, 1, 0, 0, 0, 0, 0, 0, 1, 0],
     23: [2, 1, 0, 0, 0, 2, 2, 0, 1, 0],
     24: [2, 2, 0, 0, 2, 0, 0, 0, 1, 0],
-    25: [2, 2, 0, 0, 0, 3, 0, 1, 1, 0],
+    25: [2, 1, 3, 0, 0, 3, 0, 1, 1, 0],
     26: [2, 1, 0, 0, 0, 0, 2, 1, 1, 0],
     27: [1, 0, 0, 0, 0, 0, 0, 0, 1, 0],
-    28: [2, 1, 0, 0, 1, 3, 2, 0, 1, 0],
+    28: [2, 1, 3, 0, 1, 3, 2, 0, 1, 0],
     29: [2, 1, 3, 0, 0, 0, 0, 0, 1, 0],
     30: [2, 3, 3, 0, 2, 0, 0, 2, 1, 0],
     31: [0, 0, 0, 0, 0, 2, 0, 0, 1, 0],
@@ -737,6 +775,10 @@ fourlevel_final = {
     33: [2, 1, 3, 0, 0, 0, 0, 0, 1, 0],
     34: [2, 1, 3, 3, 0, 0, 0, 1, 1, 0],
     35: [2, 0, 3, 0, 0, 0, 0, 1, 1, 0],
+    36: [2, 1, 0, 0, 0, 0, 0, 0, 1, 0],
+    37: [2, 1, 3, 0, 1, 0, 0, 0, 1, 0],
+    38: [2, 1, 3, 0, 1, 0, 1, 2, 1, 0],
+    39: [2, 1, 3, 0, 0, 0, 2, 2, 1, 0],
 }
 
 fourlevel_names = {
@@ -775,13 +817,17 @@ fourlevel_names = {
     33: 'Barki et al. (2026)',
     34: 'Liang et al. (2026)',
     35: 'Gahlan & Sethia (2026)',
+    36: 'Katsigiannis & Ramzan (2018)',
+    37: 'Miranda-Correa et al. (2021)',
+    38: 'Hosseini et al. (2025)',
+    39: 'Lee et al. (2026)',
 }
 
 k4f, lo4f, hi4f = kappa_bootstrap_ci(fl_a, fl_m, weights='quadratic')
 fl_agree = sum(1 for a, m in zip(fl_a, fl_m) if a == m)
 results.append(('RTFS four-level (quadratic)', len(fl_a), k4f, lo4f, hi4f, 'quadratic'))
 print(f"\nRTFS FOUR-LEVEL RE-CODING (A.E. vs M.K.)")
-print(f"   n = {len(fl_a)} decisions (33 eligible studies x 10 criteria, ordinal 0-3)")
+print(f"   n = {len(fl_a)} decisions (37 eligible studies x 10 criteria, ordinal 0-3)")
 print(f"   Agreements: {fl_agree}/{len(fl_a)} = {fl_agree/len(fl_a)*100:.1f}%")
 print(f"   Quadratic weighted kappa = {k4f:.4f}  [95% CI: {lo4f:.4f} - {hi4f:.4f}]")
 
@@ -793,6 +839,9 @@ fourlevel_df = pd.DataFrame([
          + [(f'FINAL_{c}', fourlevel_final[_s][j]) for j, c in enumerate(_crit)])
     for _s in sorted(azza_4lv) if _s not in (16, 23)
 ])
+fourlevel_df['__o'] = fourlevel_df['Study_ID'].map(_fl_key_order)
+fourlevel_df = fourlevel_df.sort_values('__o').drop(columns='__o').reset_index(drop=True)
+fourlevel_df['Study_ID'] = fourlevel_df.index + 1
 
 
 
@@ -816,13 +865,13 @@ for _s in sorted(azza_4lv):
     if _s in (16, 23): continue  # Qin and Wu excluded from the eligible set
     _fla.extend(azza_4lv[_s]); _flm.extend(madiha_4lv[_s])
 _fl_pc = _per_crit(_fla, _flm, 10)
-print("\nPER-CRITERION PRE-CONSENSUS AGREEMENT (out of 33 each)")
+print("\nPER-CRITERION PRE-CONSENSUS AGREEMENT")
 print("   RTFS binary:     " + ", ".join("%s %d" % (c, v) for c, v in zip(_crit10, _bin_pc))
       + "   (total %d/330)" % sum(_bin_pc))
 print("   RTFS four-level: " + ", ".join("%s %d" % (c, v) for c, v in zip(_crit10, _fl_pc))
-      + "   (total %d/330)" % sum(_fl_pc))
+      + "   (total %d/370)" % sum(_fl_pc))
 print("   Limitations:     " + ", ".join("%s %d" % (c, v) for c, v in zip(_crit6, _lim_pc))
-      + "   (total %d/198)" % sum(_lim_pc))
+      + "   (total %d/222)" % sum(_lim_pc))
 results_percrit = {
     'rtfs_binary': dict(zip(_crit10, _bin_pc)),
     'rtfs_fourlevel': dict(zip(_crit10, _fl_pc)),

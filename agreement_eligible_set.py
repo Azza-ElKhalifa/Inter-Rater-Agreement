@@ -1,6 +1,6 @@
-# Inter-rater agreement on the final eligible set (33 articles):
-# four-level RTFP (330 ratings), L1-L6 (198 ratings), and the
-# independent-reviewer L1-L6 agreement (198 ratings);
+# Inter-rater agreement on the final eligible set (37 articles):
+# four-level RTFP (370 ratings), L1-L6 (222 ratings), and the
+# independent-reviewer L1-L6 agreement (222 ratings);
 # Cohen's kappa with 95% bootstrap CI (2000 iterations, seed 42).
 import csv
 import numpy as np
@@ -26,7 +26,7 @@ lims = [r for r in csv.DictReader(open('limitation_scores_comparison.csv', encod
         if not r['Study'].lower().startswith(('qin', 'wu'))]
 three = [r for r in csv.DictReader(open('limitation_scores_three_reviewers.csv', encoding='utf-8-sig'))
          if not r['Study'].lower().startswith(('qin', 'wu'))]
-assert len(four) == len(lims) == len(three) == 33
+assert len(four) == len(lims) == len(three) == 37
 
 ae4 = [int(r[f'AE_C{c}']) for r in four for c in range(1, 11)]
 mk4 = [int(r[f'MK_C{c}']) for r in four for c in range(1, 11)]
@@ -34,7 +34,7 @@ names = ['SampleSize', 'Diversity', 'Ecological', 'Validation', 'Dataset', 'RefS
 aeL = [int(r[f'AE_L{i}_{n}']) for r in lims for i, n in enumerate(names, 1)]
 mkL = [int(r[f'MK_L{i}_{n}']) for r in lims for i, n in enumerate(names, 1)]
 
-lines = ['Inter-rater agreement, final eligible set (33 articles)', '=' * 55, '']
+lines = ['Inter-rater agreement, final eligible set (37 articles)', '=' * 55, '']
 aeH = [int(r[f'AE_L{i}_{n}']) for r in three for i, n in enumerate(names, 1)]
 hyL = [int(r[f'HY_L{i}_{n}']) for r in three for i, n in enumerate(names, 1)]
 res = [

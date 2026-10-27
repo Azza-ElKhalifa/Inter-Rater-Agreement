@@ -1,5 +1,5 @@
-# Figure 4: (a) dataset usage, (b) emotion representation (33 included studies).
-# Requires: studies_33_extraction.csv (same folder).
+# Figure 4: (a) dataset usage, (b) emotion representation (37 included studies).
+# Requires: studies_37_extraction.csv (same folder).
 import csv
 from collections import Counter
 
@@ -16,7 +16,7 @@ PASTEL_PINK   = '#D4A5C4'
 PASTEL_BLUE   = '#A8C8E8'
 PASTEL_PEACH  = '#F5C6AA'
 
-papers = list(csv.DictReader(open('studies_33_extraction.csv', encoding='utf-8-sig')))
+papers = list(csv.DictReader(open('studies_37_extraction.csv', encoding='utf-8-sig')))
 print(f'Loaded {len(papers)} papers')
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(18, 7),

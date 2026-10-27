@@ -1,5 +1,5 @@
-# Figure 3: sensing-modalities heatmap (33 included studies).
-# Requires: studies_33_extraction.csv (same folder).
+# Figure 3: sensing-modalities heatmap (37 included studies).
+# Requires: studies_37_extraction.csv (same folder).
 import csv
 
 import matplotlib
@@ -12,7 +12,7 @@ from matplotlib.colors import ListedColormap
 PASTEL_GREEN = '#A8D5BA'
 plt.rcParams.update({'font.family': 'sans-serif', 'font.sans-serif': ['Arial', 'DejaVu Sans']})
 
-papers = list(csv.DictReader(open('studies_33_extraction.csv', encoding='utf-8-sig')))
+papers = list(csv.DictReader(open('studies_37_extraction.csv', encoding='utf-8-sig')))
 print(f'Studies plotted: {len(papers)}')
 
 def author_label(p):

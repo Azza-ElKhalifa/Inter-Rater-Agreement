@@ -1,5 +1,5 @@
-# Figure 6: (a) per-study limitation severity heatmap, (b) distribution per criterion (33 included studies).
-# Requires: limitations_33.csv and studies_33_extraction.csv (same folder).
+# Figure 6: (a) per-study limitation severity heatmap, (b) distribution per criterion (37 included studies).
+# Requires: limitations_37.csv and studies_37_extraction.csv (same folder).
 import csv
 from collections import OrderedDict
 
@@ -16,8 +16,8 @@ HEATMAP_PINK   = '#D4A5C4'
 plt.rcParams.update({'font.family': 'sans-serif', 'font.sans-serif': ['Arial', 'DejaVu Sans'],
                      'savefig.facecolor': 'white', 'savefig.dpi': 500, 'savefig.bbox': 'tight'})
 
-lim_rows = list(csv.DictReader(open('limitations_33.csv', encoding='utf-8-sig')))
-papers = list(csv.DictReader(open('studies_33_extraction.csv', encoding='utf-8-sig')))
+lim_rows = list(csv.DictReader(open('limitations_37.csv', encoding='utf-8-sig')))
+papers = list(csv.DictReader(open('studies_37_extraction.csv', encoding='utf-8-sig')))
 assert len(lim_rows) == len(papers)
 
 lim_categories = OrderedDict([

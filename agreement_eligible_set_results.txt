@@ -1,9 +1,9 @@
-Inter-rater agreement, final eligible set (33 articles)
+Inter-rater agreement, final eligible set (37 articles)
 =======================================================
 
-Four-level RTFP (quadratic): n = 330; kappa = 0.9650 [0.9203 - 0.9966]
-L1-L6 limitations (quadratic): n = 198; kappa = 0.9606 [0.9304 - 0.9852]
-L1-L6 limitations (linear): n = 198; kappa = 0.9470 [0.9069 - 0.9801]
-Independent reviewer L1-L6 (quadratic): n = 198; kappa = 0.9139 [0.8711 - 0.9503]
+Four-level RTFP (quadratic): n = 370; kappa = 0.9403 [0.8973 - 0.9727]
+L1-L6 limitations (quadratic): n = 222; kappa = 0.9209 [0.8673 - 0.9616]
+L1-L6 limitations (linear): n = 222; kappa = 0.9055 [0.8535 - 0.9498]
+Independent reviewer L1-L6 (quadratic): n = 222; kappa = 0.8760 [0.8197 - 0.9248]
 
 CI: 2000-iteration bootstrap of rating pairs, seed 42.

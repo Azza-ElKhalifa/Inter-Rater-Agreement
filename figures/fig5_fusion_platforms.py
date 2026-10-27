@@ -1,5 +1,5 @@
-# Figure 5: (a) fusion strategies, (b) sensor platforms (33 included studies).
-# Requires: studies_33_extraction.csv (same folder).
+# Figure 5: (a) fusion strategies, (b) sensor platforms (37 included studies).
+# Requires: studies_37_extraction.csv (same folder).
 import csv
 from collections import Counter
 
@@ -13,7 +13,7 @@ plt.rcParams.update({'font.family': 'sans-serif', 'font.sans-serif': ['Arial', '
 PASTEL_YELLOW   = '#F5DEB3'
 PASTEL_LAVENDER = '#C8B8DB'
 
-papers = list(csv.DictReader(open('studies_33_extraction.csv', encoding='utf-8-sig')))
+papers = list(csv.DictReader(open('studies_37_extraction.csv', encoding='utf-8-sig')))
 print(f'Loaded {len(papers)} papers')
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(18, 7),

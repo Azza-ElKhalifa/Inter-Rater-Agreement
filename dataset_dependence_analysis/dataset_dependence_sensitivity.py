@@ -1,7 +1,7 @@
-# Dataset-dependence sensitivity analysis (33 included articles).
+# Dataset-dependence sensitivity analysis (37 included articles).
 #
-# Several articles analyze the same public dataset, so the 33 articles are not
-# 33 independent cohorts. Rule, stated before the analysis was run:
+# Several articles analyze the same public dataset, so the 37 articles are not
+# 37 independent cohorts. Rule, stated before the analysis was run:
 #   Primary dataset = the dataset on which the article's best reported result
 #   was obtained; when that result was not tied to a single dataset, the
 #   first-listed dataset was used. For every public dataset used as primary by
@@ -15,9 +15,9 @@ import csv
 from collections import defaultdict
 
 assign = list(csv.DictReader(open('dataset_cluster_assignments.csv', encoding='utf-8-sig')))
-lims = list(csv.DictReader(open('limitations_33.csv', encoding='utf-8-sig')))
-rtfp = list(csv.DictReader(open('rtfp_fourlevel_33.csv', encoding='utf-8-sig')))
-assert len(assign) == len(lims) == len(rtfp) == 33
+lims = list(csv.DictReader(open('limitations_37.csv', encoding='utf-8-sig')))
+rtfp = list(csv.DictReader(open('rtfp_fourlevel_37.csv', encoding='utf-8-sig')))
+assert len(assign) == len(lims) == len(rtfp) == 37
 
 def lim_profile(idx):
     out = {}
@@ -52,7 +52,7 @@ def report(name, idx, lines):
     lines.append('')
     return lp, rp
 
-full_idx = list(range(33))
+full_idx = list(range(37))
 reduced_idx = [i for i, a in enumerate(assign) if a['Retained in reduced set'] == 'Yes']
 
 lines = ['Dataset-dependence sensitivity analysis', '=' * 40, '']

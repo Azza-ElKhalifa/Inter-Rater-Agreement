@@ -1,50 +1,50 @@
 Dataset-dependence sensitivity analysis
 ========================================
 
-Full set (n = 33)
-  High-severity limitations: L1 18.8%; L2 6.1%; L3 84.8%; L4 24.2%; L5 42.4%; L6 3.0%
-  C3-C4 not reported: 68.2%
-  C2,C5 not reported: 53.0%
-  C7-C8 not reported: 77.3%
-  C1,C6 implemented: 45.5%
-  C9 discussed: 93.9%
+Full set (n = 37)
+  High-severity limitations: L1 16.7%; L2 8.1%; L3 83.8%; L4 24.3%; L5 48.6%; L6 2.7%
+  C3-C4 not reported: 67.6%
+  C2,C5 not reported: 50.0%
+  C7-C8 not reported: 74.3%
+  C1,C6 implemented: 45.9%
+  C9 discussed: 94.6%
   C10 not reported: 100.0%
 
-Reduced set (one representative per repeated public dataset) (n = 26)
-  High-severity limitations: L1 24.0%; L2 7.7%; L3 80.8%; L4 26.9%; L5 53.8%; L6 3.8%
-  C3-C4 not reported: 69.2%
-  C2,C5 not reported: 48.1%
-  C7-C8 not reported: 75.0%
+Reduced set (one representative per repeated public dataset) (n = 29)
+  High-severity limitations: L1 21.4%; L2 10.3%; L3 79.3%; L4 24.1%; L5 62.1%; L6 3.4%
+  C3-C4 not reported: 69.0%
+  C2,C5 not reported: 44.8%
+  C7-C8 not reported: 72.4%
   C1,C6 implemented: 50.0%
-  C9 discussed: 92.3%
+  C9 discussed: 93.1%
   C10 not reported: 100.0%
 
 Absolute change, reduced vs full (percentage points):
-  L1 high: +5.2
-  L2 high: +1.6
-  L3 high: -4.1
-  L4 high: +2.7
-  L5 high: +11.4
-  L6 high: +0.8
-  C3-C4 not reported: +1.0
-  C2,C5 not reported: -5.0
-  C7-C8 not reported: -2.3
-  C1,C6 implemented: +4.5
-  C9 discussed: -1.6
+  L1 high: +4.8
+  L2 high: +2.2
+  L3 high: -4.5
+  L4 high: -0.2
+  L5 high: +13.4
+  L6 high: +0.7
+  C3-C4 not reported: +1.4
+  C2,C5 not reported: -5.2
+  C7-C8 not reported: -1.9
+  C1,C6 implemented: +4.1
+  C9 discussed: -1.5
   C10 not reported: +0.0
 
 Leave-one-dataset-out (all articles with that primary dataset removed):
-  Without DEAP (n = 28): L3 high 82.1%; C3-C4 NR 67.9%; C2,C5 NR 46.4%; C10 NR 100.0%
-  Without WESAD (n = 31): L3 high 83.9%; C3-C4 NR 67.7%; C2,C5 NR 54.8%; C10 NR 100.0%
-  Without CASE (n = 31): L3 high 83.9%; C3-C4 NR 69.4%; C2,C5 NR 51.6%; C10 NR 100.0%
-  Without MAHNOB-HCI (n = 31): L3 high 83.9%; C3-C4 NR 67.7%; C2,C5 NR 53.2%; C10 NR 100.0%
-  Without AMIGOS (n = 32): L3 high 84.4%; C3-C4 NR 68.8%; C2,C5 NR 53.1%; C10 NR 100.0%
-  Without K-EmoCon (n = 32): L3 high 84.4%; C3-C4 NR 68.8%; C2,C5 NR 54.7%; C10 NR 100.0%
-  Without SEED (n = 32): L3 high 84.4%; C3-C4 NR 70.3%; C2,C5 NR 51.6%; C10 NR 100.0%
-  Without UBFC-Phys (n = 32): L3 high 84.4%; C3-C4 NR 68.8%; C2,C5 NR 51.6%; C10 NR 100.0%
-  Without DECAF (n = 32): L3 high 84.4%; C3-C4 NR 68.8%; C2,C5 NR 51.6%; C10 NR 100.0%
-  Without POPANE (n = 32): L3 high 84.4%; C3-C4 NR 67.2%; C2,C5 NR 51.6%; C10 NR 100.0%
-  Without TERS-ER (n = 32): L3 high 87.5%; C3-C4 NR 67.2%; C2,C5 NR 54.7%; C10 NR 100.0%
-  Without EMOGNITION (n = 32): L3 high 84.4%; C3-C4 NR 67.2%; C2,C5 NR 53.1%; C10 NR 100.0%
+  Without DEAP (n = 32): L3 high 81.2%; C3-C4 NR 67.2%; C2,C5 NR 43.8%; C10 NR 100.0%
+  Without WESAD (n = 35): L3 high 82.9%; C3-C4 NR 67.1%; C2,C5 NR 51.4%; C10 NR 100.0%
+  Without CASE (n = 35): L3 high 82.9%; C3-C4 NR 68.6%; C2,C5 NR 48.6%; C10 NR 100.0%
+  Without MAHNOB-HCI (n = 35): L3 high 82.9%; C3-C4 NR 67.1%; C2,C5 NR 50.0%; C10 NR 100.0%
+  Without AMIGOS (n = 36): L3 high 83.3%; C3-C4 NR 68.1%; C2,C5 NR 50.0%; C10 NR 100.0%
+  Without K-EmoCon (n = 36): L3 high 83.3%; C3-C4 NR 68.1%; C2,C5 NR 51.4%; C10 NR 100.0%
+  Without SEED (n = 36): L3 high 83.3%; C3-C4 NR 69.4%; C2,C5 NR 48.6%; C10 NR 100.0%
+  Without UBFC-Phys (n = 36): L3 high 83.3%; C3-C4 NR 68.1%; C2,C5 NR 48.6%; C10 NR 100.0%
+  Without DECAF (n = 36): L3 high 83.3%; C3-C4 NR 68.1%; C2,C5 NR 48.6%; C10 NR 100.0%
+  Without POPANE (n = 36): L3 high 83.3%; C3-C4 NR 66.7%; C2,C5 NR 48.6%; C10 NR 100.0%
+  Without TERS-ER (n = 36): L3 high 86.1%; C3-C4 NR 66.7%; C2,C5 NR 51.4%; C10 NR 100.0%
+  Without EMOGNITION (n = 36): L3 high 83.3%; C3-C4 NR 66.7%; C2,C5 NR 50.0%; C10 NR 100.0%
 
-Largest absolute change in the reduced set: 11.4 percentage points.
+Largest absolute change in the reduced set: 13.4 percentage points.
