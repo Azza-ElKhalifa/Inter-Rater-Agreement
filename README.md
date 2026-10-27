@@ -4,15 +4,15 @@ Supporting data and analysis code for the systematic review:
 
 > **Translational evidence gaps in multimodal affective-state recognition for digital health: a systematic review**
 
-The final synthesis includes 33 peer-reviewed empirical journal articles. Two reviewers (A.E. and M.K.) independently performed all screening, limitation assessment, Reported Translational Features Profile (RTFP) coding, and data extraction, with disagreements resolved by consensus and, where necessary, adjudication. A third reviewer (H.Y.) independently validated the title-and-abstract screening and the limitation assessment.
+The final synthesis includes 37 peer-reviewed empirical journal articles. Two reviewers (A.E. and M.K.) independently performed all screening, limitation assessment, Reported Translational Features Profile (RTFP) coding, and data extraction, with disagreements resolved by consensus and, where necessary, adjudication. A third reviewer (H.Y.) independently validated the title-and-abstract screening and the limitation assessment.
 
 ## Contents
 
-### Final eligible set (33 articles)
+### Final eligible set (37 articles)
 
 | File | Description |
 |------|-------------|
-| `studies_extraction_37.csv` | Study-level data extraction for the 33 included articles (20 fields) |
+| `studies_extraction_37.csv` | Study-level data extraction for the 37 included articles (19 fields) |
 | `fulltext_exclusion_log.csv` | The 13 full-text exclusions, each with citation and specific reason |
 | `agreement_eligible_set.py` | Inter-rater agreement on the eligible set: four-level RTFP (370 ratings), L1-L6 (222 ratings), and the independent-reviewer L1-L6 agreement, with bootstrap 95% CIs |
 | `agreement_eligible_set_results.txt` | Output of `agreement_eligible_set.py` |
@@ -54,7 +54,7 @@ The final synthesis includes 33 peer-reviewed empirical journal articles. Two re
 | `calculate_kappa.py` | Cohen's kappa with bootstrap 95% CIs for all stages |
 | `kappa_results.txt` | Output of `calculate_kappa.py` |
 
-All rating files list the 33 eligible studies. The screening files record the full screening history, and the 13 full-text exclusions appear in `fulltext_exclusion_log.csv`.
+All rating files list the 37 eligible studies. The screening files record the full screening history, and the 9 full-text exclusions appear in `fulltext_exclusion_log.csv`.
 
 ## Agreement statistics
 
