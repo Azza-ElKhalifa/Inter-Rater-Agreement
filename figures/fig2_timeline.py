@@ -29,9 +29,10 @@ print('Cumul :', cumulative)
 
 fig, ax1 = plt.subplots(figsize=(8, 4.5))
 bars = ax1.bar(all_years, counts, color='#D3D3D3', edgecolor='white', width=0.7, zorder=2)
-for bar, count in zip(bars, counts):
+for bar, count, yr in zip(bars, counts, all_years):
     if count > 0:
-        ax1.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.15,
+        dy = -0.62 if yr == 2021 else 0.15
+        ax1.text(bar.get_x() + bar.get_width()/2, bar.get_height() + dy,
                  str(count), ha='center', va='bottom', fontsize=10, fontweight='normal')
 
 ax1.set_xlabel('Year', fontsize=12)

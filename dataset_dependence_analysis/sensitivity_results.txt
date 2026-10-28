@@ -2,7 +2,7 @@ Dataset-dependence sensitivity analysis
 ========================================
 
 Full set (n = 37)
-  High-severity limitations: L1 16.7%; L2 8.1%; L3 83.8%; L4 24.3%; L5 48.6%; L6 2.7%
+  High-severity limitations: L1 16.7%; L2 8.1%; L3 83.8%; L4 43.2%; L5 48.6%; L6 2.7%
   C3-C4 not reported: 67.6%
   C2,C5 not reported: 50.0%
   C7-C8 not reported: 74.3%
@@ -11,7 +11,7 @@ Full set (n = 37)
   C10 not reported: 100.0%
 
 Reduced set (one representative per repeated public dataset) (n = 29)
-  High-severity limitations: L1 21.4%; L2 10.3%; L3 79.3%; L4 24.1%; L5 62.1%; L6 3.4%
+  High-severity limitations: L1 21.4%; L2 10.3%; L3 79.3%; L4 41.4%; L5 62.1%; L6 3.4%
   C3-C4 not reported: 69.0%
   C2,C5 not reported: 44.8%
   C7-C8 not reported: 72.4%
@@ -23,7 +23,7 @@ Absolute change, reduced vs full (percentage points):
   L1 high: +4.8
   L2 high: +2.2
   L3 high: -4.5
-  L4 high: -0.2
+  L4 high: -1.9
   L5 high: +13.4
   L6 high: +0.7
   C3-C4 not reported: +1.4

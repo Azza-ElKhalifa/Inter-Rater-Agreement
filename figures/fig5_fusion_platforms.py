@@ -108,6 +108,10 @@ for t in autotexts:
 if len(autotexts) > 1:
     pos = autotexts[-1].get_position()
     autotexts[-1].set_position((pos[0] + 0.04, pos[1] + 0.20))
+for _t in autotexts:
+    if _t.get_text().startswith('4 ('):
+        _p = _t.get_position()
+        _t.set_position((_p[0] + 0.10, _p[1] + 0.05))
     autotexts[-1].set_fontsize(15)
 
 legend_labels = [f'{l}' for l in pl_labels]

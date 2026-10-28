@@ -124,6 +124,10 @@ for t in autotexts:
     t.set_fontsize(15)
     t.set_fontweight('bold')
 
+for _t in autotexts:
+    if _t.get_text().startswith('14 ('):
+        _x, _y = _t.get_position()
+        _t.set_position((_x + 0.05, _y))
 ax2.text(0, 0, f'n={sum(em_sizes)}', ha='center', va='center',
          fontsize=19, fontweight='bold', color='#444444')
 
