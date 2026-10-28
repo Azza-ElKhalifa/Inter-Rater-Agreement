@@ -72,13 +72,28 @@ clusters = defaultdict(list)
 for i, a in enumerate(assign):
     if a['Cohort type'] == 'Public':
         clusters[a['Primary dataset or cohort']].append(i)
+lodo_l3 = []
+lodo_maxchg = 0.0
+lodo_maxname = ''
 for ds in sorted(clusters, key=lambda d: -len(clusters[d])):
     idx = [i for i in full_idx if i not in clusters[ds]]
     lp = lim_profile(idx)
     rp = rtfp_profile(idx)
+    lodo_l3.append(lp['L3'])
+    for k in full_lp:
+        chg = abs(lp[k] - full_lp[k])
+        if chg > lodo_maxchg:
+            lodo_maxchg, lodo_maxname = chg, f'{k} high'
+    for k in full_rp:
+        chg = abs(rp[k] - full_rp[k])
+        if chg > lodo_maxchg:
+            lodo_maxchg, lodo_maxname = chg, k
     lines.append(f'  Without {ds} (n = {len(idx)}): '
                  f'L3 high {lp["L3"]:.1f}%; C3-C4 NR {rp["C3-C4 not reported"]:.1f}%; '
                  f'C2,C5 NR {rp["C2,C5 not reported"]:.1f}%; C10 NR {rp["C10 not reported"]:.1f}%')
+lines.append('')
+lines.append(f'LODO L3 high range: {min(lodo_l3):.1f}% to {max(lodo_l3):.1f}%')
+lines.append(f'Largest LODO change vs full: {lodo_maxchg:.1f} pp ({lodo_maxname})')
 lines.append('')
 
 mx_l = max(abs(red_lp[k] - full_lp[k]) for k in full_lp)
