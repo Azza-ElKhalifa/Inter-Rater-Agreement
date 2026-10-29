@@ -21,7 +21,7 @@ papers = list(csv.DictReader(open('studies_37_extraction.csv', encoding='utf-8-s
 assert len(lim_rows) == len(papers)
 
 lim_categories = OrderedDict([
-    ('L1', 'Sample Size Adequacy'),
+    ('L1', 'Sample-Size Exposure'),
     ('L2', 'Population Diversity'),
     ('L3', 'Ecological Validity'),
     ('L4', 'Validation Strategy'),
