@@ -62,12 +62,12 @@ All rating files list the 37 eligible studies. The screening files record the fu
 |---|---|---|---|---|
 | Title-and-abstract screening | 170 | 0.97 | 0.92-1.00 | Unweighted |
 | Full-text screening | 46 | 0.94 | 0.79-1.00 | Unweighted |
-| Four-level RTFP, eligible studies | 370 | 0.94 | 0.90-0.97 | Quadratic |
+| Four-level RTFP, eligible studies | 370 | 0.94 | 0.90-0.98 | Quadratic |
 | Limitation ratings, eligible studies | 222 | 0.92 | 0.87-0.96 | Quadratic |
 | Validation reviewer: title/abstract | 170 | 0.93 | 0.86-0.98 | Unweighted |
 | Validation reviewer: limitations | 222 | 0.88 | 0.82-0.92 | Quadratic |
 
-CIs from a 2000-iteration bootstrap of rating pairs (seed 42). Interpretation follows Landis and Koch (1977): 0.81-1.00, almost perfect.
+CIs from a 2000-iteration bootstrap (seed 42); pooled study-by-criterion ratings use a study-clustered bootstrap. Kappa values are pre-consensus. Interpretation follows Landis and Koch (1977): 0.81-1.00, almost perfect.
 
 ## Reproducing the results
 

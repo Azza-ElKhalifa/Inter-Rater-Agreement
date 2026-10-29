@@ -64,6 +64,38 @@ def kappa_bootstrap_ci(y1, y2, weights=None, n_boot=2000, seed=42):
     return kappa, ci_lo, ci_hi
 
 
+def kappa_clustered_bootstrap_ci(y1, y2, group_size, weights=None, n_boot=2000, seed=42):
+    """
+    Cohen's Kappa with a 95% CI from a clustered (study-level) bootstrap.
+    For pooled study-by-criterion ratings, cells are ordered study-by-study in
+    fixed-size blocks (group_size criteria per study). Resampling whole studies
+    (clusters) with replacement preserves the within-study clustering of ratings;
+    the point estimate is unchanged. Returns: (kappa, ci_lower, ci_upper).
+    """
+    rng = np.random.RandomState(seed)
+    y1, y2 = np.array(y1), np.array(y2)
+    n = len(y1)
+    assert n % group_size == 0, (n, group_size)
+    n_groups = n // group_size
+    blocks = [np.arange(g * group_size, (g + 1) * group_size) for g in range(n_groups)]
+    try:
+        kappa = cohen_kappa_score(y1, y2, weights=weights)
+    except Exception:
+        kappa = 1.0
+    boot = []
+    for _ in range(n_boot):
+        chosen = rng.choice(n_groups, size=n_groups, replace=True)
+        idx = np.concatenate([blocks[g] for g in chosen])
+        try:
+            k = cohen_kappa_score(y1[idx], y2[idx], weights=weights)
+            boot.append(1.0 if np.isnan(k) else k)
+        except Exception:
+            boot.append(1.0)
+    lo = float(np.nanpercentile(boot, 2.5))
+    hi = float(np.nanpercentile(boot, 97.5))
+    return kappa, (kappa if np.isnan(lo) else lo), (kappa if np.isnan(hi) else hi)
+
+
 # ═════════════════════════════════════════════════════════════════════════════
 # 1. DATA: TRS criteria ratings, both reviewers
 # ═════════════════════════════════════════════════════════════════════════════
@@ -486,7 +518,7 @@ for j, cn in enumerate(criteria_names):
 
 # ── 6d. L1-L6 limitation framework (linear + quadratic weighted) ─────────
 k4_lin, lo4_lin, hi4_lin = kappa_bootstrap_ci(all_lim_a, all_lim_m, weights='linear')
-k4_quad, lo4_quad, hi4_quad = kappa_bootstrap_ci(all_lim_a, all_lim_m, weights='quadratic')
+k4_quad, lo4_quad, hi4_quad = kappa_clustered_bootstrap_ci(all_lim_a, all_lim_m, group_size=6, weights='quadratic')
 lim_agree = sum(1 for a, m in zip(all_lim_a, all_lim_m) if a == m)
 
 results.append(('L1-L6 (linear weighted)', len(all_lim_a), k4_lin, lo4_lin, hi4_lin, 'linear'))
@@ -562,7 +594,7 @@ kh_ta, lo_ta, hi_ta = kappa_bootstrap_ci(azza_ta_hk, hayam_ta)
 # Hayam read the full texts to reapply the L1-L6 framework; she did NOT perform
 # independent full-text include/exclude screening.
 kh_lin, lo_lin, hi_lin = kappa_bootstrap_ci(hk_lim_a, hk_lim_h, weights='linear')
-kh_quad, lo_quad, hi_quad = kappa_bootstrap_ci(hk_lim_a, hk_lim_h, weights='quadratic')
+kh_quad, lo_quad, hi_quad = kappa_clustered_bootstrap_ci(hk_lim_a, hk_lim_h, group_size=6, weights='quadratic')
 
 ta_ag = sum(1 for a, h in zip(azza_ta_hk, hayam_ta) if a == h)
 lim_ag_hk = sum(1 for a, h in zip(hk_lim_a, hk_lim_h) if a == h)
@@ -823,7 +855,7 @@ fourlevel_names = {
     39: 'Lee et al. (2026)',
 }
 
-k4f, lo4f, hi4f = kappa_bootstrap_ci(fl_a, fl_m, weights='quadratic')
+k4f, lo4f, hi4f = kappa_clustered_bootstrap_ci(fl_a, fl_m, group_size=10, weights='quadratic')
 fl_agree = sum(1 for a, m in zip(fl_a, fl_m) if a == m)
 results.append(('RTFS four-level (quadratic)', len(fl_a), k4f, lo4f, hi4f, 'quadratic'))
 print(f"\nRTFS FOUR-LEVEL RE-CODING (A.E. vs M.K.)")

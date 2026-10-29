@@ -7,14 +7,21 @@ import numpy as np
 from sklearn.metrics import cohen_kappa_score
 
 
-def kappa_bootstrap_ci(y1, y2, weights=None, n_boot=2000, seed=42):
+def kappa_clustered_bootstrap_ci(y1, y2, group_size, weights=None, n_boot=2000, seed=42):
+    # Pooled study-by-criterion ratings are ordered study-by-study in fixed-size
+    # blocks (group_size criteria per study). Resampling whole studies (clusters)
+    # preserves the within-study clustering of ratings; the point estimate is unchanged.
     rng = np.random.RandomState(seed)
     y1, y2 = np.array(y1), np.array(y2)
     n = len(y1)
+    assert n % group_size == 0, (n, group_size)
+    n_groups = n // group_size
+    blocks = [np.arange(g * group_size, (g + 1) * group_size) for g in range(n_groups)]
     kappa = cohen_kappa_score(y1, y2, weights=weights)
     boot = []
     for _ in range(n_boot):
-        idx = rng.choice(n, size=n, replace=True)
+        chosen = rng.choice(n_groups, size=n_groups, replace=True)
+        idx = np.concatenate([blocks[g] for g in chosen])
         k = cohen_kappa_score(y1[idx], y2[idx], weights=weights)
         boot.append(1.0 if np.isnan(k) else k)
     return kappa, float(np.nanpercentile(boot, 2.5)), float(np.nanpercentile(boot, 97.5))
@@ -38,15 +45,15 @@ lines = ['Inter-rater agreement, final eligible set (37 articles)', '=' * 55, ''
 aeH = [int(r[f'AE_L{i}_{n}']) for r in three for i, n in enumerate(names, 1)]
 hyL = [int(r[f'HY_L{i}_{n}']) for r in three for i, n in enumerate(names, 1)]
 res = [
-    ('Four-level RTFP (quadratic)', ae4, mk4, 'quadratic'),
-    ('L1-L6 limitations (quadratic)', aeL, mkL, 'quadratic'),
-    ('L1-L6 limitations (linear)', aeL, mkL, 'linear'),
-    ('Independent reviewer L1-L6 (quadratic)', aeH, hyL, 'quadratic'),
+    ('Four-level RTFP (quadratic)', ae4, mk4, 'quadratic', 10),
+    ('L1-L6 limitations (quadratic)', aeL, mkL, 'quadratic', 6),
+    ('L1-L6 limitations (linear)', aeL, mkL, 'linear', 6),
+    ('Independent reviewer L1-L6 (quadratic)', aeH, hyL, 'quadratic', 6),
 ]
-for name, a, b, w in res:
-    k, lo, hi = kappa_bootstrap_ci(a, b, weights=w)
+for name, a, b, w, gs in res:
+    k, lo, hi = kappa_clustered_bootstrap_ci(a, b, gs, weights=w)
     lines.append(f'{name}: n = {len(a)}; kappa = {k:.4f} [{lo:.4f} - {hi:.4f}]')
 lines.append('')
-lines.append('CI: 2000-iteration bootstrap of rating pairs, seed 42.')
+lines.append('CI: 2000-iteration clustered bootstrap resampling whole studies, seed 42.')
 open('agreement_eligible_set_results.txt', 'w', encoding='utf-8').write('\n'.join(lines) + '\n')
 print('\n'.join(lines))
