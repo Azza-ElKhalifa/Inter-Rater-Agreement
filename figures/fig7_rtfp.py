@@ -18,11 +18,15 @@ def col(c):
     return [int(r[f'C{c}']) for r in rows]
 
 domains = [
-    ('Technical validation', 'C3–C4', [3, 4]),
-    ('Naturalistic/longitudinal', 'C2, C5', [2, 5]),
-    ('Wearable sensing and explainability', 'C1, C6', [1, 6]),
-    ('Application utility', 'C9', [9]),
-    ('Safety/privacy/security', 'C7–C8', [7, 8]),
+    ('Wearable-device use', 'C1', [1]),
+    ('Naturalistic data collection', 'C2', [2]),
+    ('Participant-independent validation', 'C3', [3]),
+    ('External validation', 'C4', [4]),
+    ('Longitudinal evaluation', 'C5', [5]),
+    ('Explainability', 'C6', [6]),
+    ('Missing-data handling', 'C7', [7]),
+    ('Privacy/security discussion', 'C8', [8]),
+    ('Application-specific utility', 'C9', [9]),
     ('Regulation/implementation', 'C10', [10]),
 ]
 level_names = ['Not reported', 'Discussed', 'Implemented', 'Empirically evaluated']
@@ -44,7 +48,7 @@ GREEN_FACE, GREEN_EDGE, NUM = '#DCEEE4', '#3C7D5E', '#3C7D5E'
 plt.rcParams.update({'font.family': 'Arial'})
 
 fig = plt.figure(figsize=(12, 12.6))
-axa = fig.add_axes([0.30, 0.695, 0.66, 0.235])
+axa = fig.add_axes([0.33, 0.645, 0.63, 0.285])
 axb = fig.add_axes([0.03, 0.375, 0.94, 0.245])
 axc = fig.add_axes([0.03, 0.035, 0.94, 0.255])
 
@@ -56,13 +60,13 @@ for (name, items, cs), pcts, y in zip(domains, profile, ypos):
         if p > 0:
             axa.barh(y, p, left=left, height=0.62, color=colr, zorder=3,
                      edgecolor='white', linewidth=0.8)
-            if p >= 8:
+            if p >= 7:
                 lbl = f'{p:.0f}%' if abs(p - round(p)) < 1e-9 else f'{p:.1f}%'
                 axa.text(left + p / 2, y, lbl, va='center', ha='center',
-                         fontsize=11.5, fontweight='bold',
+                         fontsize=10, fontweight='bold',
                          color='white' if k == 3 else DARK)
         left += p
-    axa.text(-2, y, name, va='center', ha='right', fontsize=13.5, color=DARK)
+    axa.text(-2, y, f'{items}  {name}', va='center', ha='right', fontsize=10.5, color=DARK)
 
 axa.set_xlim(0, 100)
 axa.set_ylim(-0.6, len(domains) - 0.4)
